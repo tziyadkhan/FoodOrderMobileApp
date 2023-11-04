@@ -1,0 +1,247 @@
+[
+ {
+     "restaurantName": "Burger Boulevard",
+     "restaurantImage": "burgerBoulevard",
+     "restaurantInfo": "heleki bir text yoxdu",
+     "restaurantWorkingHours" : "09:00AM - 18:00PM",
+     "restaurantPromotionText" : "",
+     "restaurantPromotionImage" : "",
+     "mealList": [
+         {
+             "mealName": "Bigfoot Burger",
+             "mealImage": "bigfootBurger",
+             "mealPrice": 10,
+             "mealContent": "Kotlet, corek, holland pendiri",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Cheese Burger",
+             "mealImage": "cheeseBurger",
+             "mealPrice": 12,
+             "mealContent": "Kotlet, corek, coxlu holland pendiri",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Meteor Burger",
+             "mealImage": "meteorBurger",
+             "mealPrice": 13,
+             "mealContent": "Kotlet, corek, holland pendiri",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Beefcake Burger",
+             "mealImage": "beefcakeBurger",
+             "mealPrice": 14,
+             "mealContent": "Mal etinden kotlet, corek, holland pendiri",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "BBQ Burger",
+             "mealImage": "bbqBurger",
+             "mealPrice": 14,
+             "mealContent": "Kotlet, corek, holland pendiri, barbekyu sousu",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Chicken Burger",
+             "mealImage": "chickenBurger",
+             "mealPrice": 8,
+             "mealContent": "Toyuq etinden Kotlet, corek, holland pendiri",
+             "mealAmount": 0
+         }
+     ]
+ },
+ {
+     "restaurantName": "The Dessert Oasis",
+     "restaurantImage": "dessertOasis",
+     "restaurantInfo": "heleki bir text yoxdu",
+     "restaurantWorkingHours" : "09:00AM - 18:00PM",
+     "restaurantPromotionText" : "",
+     "restaurantPromotionImage" : "",
+     "mealList": [
+         {
+             "mealName": "Tiramisu",
+             "mealImage": "tiramisu",
+             "mealPrice": 20,
+             "mealContent": "Egg, sugar, coffee, milk, biscuits",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Cinnabon",
+             "mealImage": "cinnabon",
+             "mealPrice": 24,
+             "mealContent": "Cinnamon, egg, flour, milk, curd",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Eclair",
+             "mealImage": "eclair",
+             "mealPrice": 22,
+             "mealContent": "Egg, sugar, milk, flour",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Waffle",
+             "mealImage": "waffle",
+             "mealPrice": 10,
+             "mealContent": "Egg, sugar, milk, flour",
+             "mealAmount": 0
+         }
+     ]
+ },
+ 
+ {
+    "restaurantName": "Sushi Samurai Savor",
+    "restaurantImage": "sushiSamuraiSavor",
+    "restaurantInfo": "heleki bir text yoxdu",
+    "restaurantWorkingHours" : "09:00AM - 18:00PM",
+    "restaurantPromotionText" : "",
+    "restaurantPromotionImage" : "",
+     "mealList": [
+         {
+             "mealName": "Sushi",
+             "mealImage": "sushi",
+             "mealPrice": 20,
+             "mealContent": "raw fish, rice",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Kimchi",
+             "mealImage": "kimchi",
+             "mealPrice": 24,
+             "mealContent": "shrimps",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Biryani",
+             "mealImage": "biryani",
+             "mealPrice": 22,
+             "mealContent": "par-cooked rice, milk and ghee",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Ramen",
+             "mealImage": "ramen",
+             "mealPrice": 10,
+             "mealContent": "nori, a marinated egg, scallions",
+             "mealAmount": 0
+         }
+     ]
+ },
+ {
+    "restaurantName": "Nonna's Kitchen & Trattoria",
+    "restaurantImage": "nonnasKitchen",
+    "restaurantInfo": "heleki bir text yoxdu",
+    "restaurantWorkingHours" : "09:00AM - 18:00PM",
+    "restaurantPromotionText" : "",
+    "restaurantPromotionImage" : "",
+     "mealList": [
+         {
+             "mealName": "Risotto",
+             "mealImage": "risotto",
+             "mealPrice": 20,
+             "mealContent": "Pumpkin, red radicchio, mushrooms, sausage or shellfish.",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Pasta",
+             "mealImage": "pasta",
+             "mealPrice": 24,
+             "mealContent": "Spaghetti, bacon, egg yolk, and cheese",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Gnocchi",
+             "mealImage": "gnocchi",
+             "mealPrice": 22,
+             "mealContent": "cheese, spinach, eggs, and a variety of sauces",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Pesto",
+             "mealImage": "pesto",
+             "mealPrice": 10,
+             "mealContent": "Parmesan cheese, Pecorino cheese, pine nuts, garlic, and salt",
+             "mealAmount": 0
+         }
+     ]
+ },
+
+ {
+    "restaurantName": "CleanPlate Dining",
+    "restaurantImage": "cleanPlate",
+    "restaurantInfo": "heleki bir text yoxdu",
+    "restaurantWorkingHours" : "09:00AM - 18:00PM",
+    "restaurantPromotionText" : "",
+    "restaurantPromotionImage" : "",
+     "mealList": [
+         {
+             "mealName": "Ghanaian Salad",
+             "mealImage": "ghanaian",
+             "mealPrice": 20,
+             "mealContent": "Lettuce, tomatoes, carrots, cucumber, onions and baked beans.",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Fajita Steak Salad",
+             "mealImage": "fajita",
+             "mealPrice": 24,
+             "mealContent": "Jack cheese, some fresh avocado",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Spinach Salad",
+             "mealImage": "spinach",
+             "mealPrice": 22,
+             "mealContent": "Peppered bacon bits, hard-boiled eggs and caramelized mushrooms.",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Cobb-Wedge",
+             "mealImage": "cobbWedge",
+             "mealPrice": 10,
+             "mealContent": "Cubed ham, hard-boiled eggs, diced avocados and edamame.",
+             "mealAmount": 0
+         }
+     ]
+ },
+ {
+    "restaurantName": "Mediterranean Munch",
+    "restaurantImage": "mediterraneanMunch",
+    "restaurantInfo": "heleki bir text yoxdu",
+    "restaurantWorkingHours" : "09:00AM - 18:00PM",
+    "restaurantPromotionText" : "",
+    "restaurantPromotionImage" : "",
+     "mealList": [
+         {
+             "mealName": "Bavarian Doner",
+             "mealImage": "bavarian",
+             "mealPrice": 20,
+             "mealContent": "Meat,oninion,cheese,fri",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Turkish Doner",
+             "mealImage": "turkish",
+             "mealPrice": 24,
+             "mealContent": "Meat,oninion,cheese,fri",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Basdirma doner",
+             "mealImage": "azeri",
+             "mealPrice": 22,
+             "mealContent": "Meat,oninion,cheese,fri stuffed in bread",
+             "mealAmount": 0
+         },
+         {
+             "mealName": "Iskander",
+             "mealImage": "iskander",
+             "mealPrice": 10,
+             "mealContent": "Meat, onion, tomato, rice",
+             "mealAmount": 0
+         }
+     ]
+ }
+ 
+ ]
