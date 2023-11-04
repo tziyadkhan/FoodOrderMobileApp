@@ -15,12 +15,18 @@ class RegistrationPageController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signupBackground: UIButton!
     
-    var user = [User]()
+    let helper = UserLoginFileManager()
+    var users = [User]()
     var onLogin: ((String?, String?) -> Void)?
+    var onUserReg: ((User) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
+        
+        helper.readUserData { userItems in
+            self.users = userItems
+        }
     }
     
 
@@ -38,7 +44,9 @@ extension RegistrationPageController {
                         email: emailTextField.text ?? "",
                         phonenumber: phonenumberTextField.text ?? "",
                         password: passwordTextField.text ?? "")
-        
+        onUserReg?(user)
+        users.append(user)
+        helper.writeUserData(users: users)
         navigationController?.popViewController(animated: true)
     }
     

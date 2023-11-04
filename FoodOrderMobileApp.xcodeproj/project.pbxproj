@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		904942B52AF65A0D0062D897 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B42AF65A0D0062D897 /* User.swift */; };
-		904942B72AF665F40062D897 /* RestaurantsStorage.strings in Resources */ = {isa = PBXBuildFile; fileRef = 904942B62AF665F40062D897 /* RestaurantsStorage.strings */; };
+		904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B92AF66D8E0062D897 /* TabBarController.swift */; };
+		904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BC2AF66DF80062D897 /* HomePageController.swift */; };
+		904942C02AF673970062D897 /* UserLoginFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BF2AF673970062D897 /* UserLoginFileManager.swift */; };
 		909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C6F2AF63E4900171515 /* AppDelegate.swift */; };
 		909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C712AF63E4900171515 /* SceneDelegate.swift */; };
 		909F8C772AF63E4900171515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909F8C752AF63E4900171515 /* Main.storyboard */; };
@@ -20,7 +22,9 @@
 
 /* Begin PBXFileReference section */
 		904942B42AF65A0D0062D897 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		904942B62AF665F40062D897 /* RestaurantsStorage.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = RestaurantsStorage.strings; sourceTree = "<group>"; };
+		904942B92AF66D8E0062D897 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		904942BC2AF66DF80062D897 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
+		904942BF2AF673970062D897 /* UserLoginFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginFileManager.swift; sourceTree = "<group>"; };
 		909F8C6C2AF63E4900171515 /* FoodOrderMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909F8C6F2AF63E4900171515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909F8C712AF63E4900171515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,9 +51,32 @@
 			isa = PBXGroup;
 			children = (
 				904942B42AF65A0D0062D897 /* User.swift */,
-				904942B62AF665F40062D897 /* RestaurantsStorage.strings */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		904942B82AF66D720062D897 /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				904942B92AF66D8E0062D897 /* TabBarController.swift */,
+			);
+			path = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		904942BB2AF66DE00062D897 /* Home Page */ = {
+			isa = PBXGroup;
+			children = (
+				904942BC2AF66DF80062D897 /* HomePageController.swift */,
+			);
+			path = "Home Page";
+			sourceTree = "<group>";
+		};
+		904942BE2AF673800062D897 /* File Manager */ = {
+			isa = PBXGroup;
+			children = (
+				904942BF2AF673970062D897 /* UserLoginFileManager.swift */,
+			);
+			path = "File Manager";
 			sourceTree = "<group>";
 		};
 		909F8C632AF63E4900171515 = {
@@ -71,15 +98,18 @@
 		909F8C6E2AF63E4900171515 /* FoodOrderMobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				904942BB2AF66DE00062D897 /* Home Page */,
 				909F8C832AF63E5F00171515 /* Login Page */,
 				909F8C862AF63E9000171515 /* Registration Page */,
-				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
-				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
 				909F8C752AF63E4900171515 /* Main.storyboard */,
 				904942B32AF659530062D897 /* DataManager */,
-				909F8C782AF63E4A00171515 /* Assets.xcassets */,
-				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
+				904942BE2AF673800062D897 /* File Manager */,
 				909F8C7D2AF63E4A00171515 /* Info.plist */,
+				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
+				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
+				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
+				909F8C782AF63E4A00171515 /* Assets.xcassets */,
+				904942B82AF66D720062D897 /* Tab Bar Controller */,
 			);
 			path = FoodOrderMobileApp;
 			sourceTree = "<group>";
@@ -161,7 +191,6 @@
 				909F8C7C2AF63E4A00171515 /* LaunchScreen.storyboard in Resources */,
 				909F8C792AF63E4A00171515 /* Assets.xcassets in Resources */,
 				909F8C772AF63E4900171515 /* Main.storyboard in Resources */,
-				904942B72AF665F40062D897 /* RestaurantsStorage.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,9 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904942C02AF673970062D897 /* UserLoginFileManager.swift in Sources */,
 				909F8C852AF63E7B00171515 /* LoginPageController.swift in Sources */,
+				904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */,
 				909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */,
 				909F8C882AF63EAA00171515 /* RegistrationPageController.swift in Sources */,
+				904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */,
 				904942B52AF65A0D0062D897 /* User.swift in Sources */,
 				909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */,
 			);

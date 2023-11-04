@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Png-DV-GKT">
-                                <rect key="frame" x="31.666666666666657" y="76" width="330" height="200"/>
+                                <rect key="frame" x="31.666666666666657" y="105" width="330" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="L2Y-6H-tzR"/>
                                     <constraint firstAttribute="height" constant="200" id="y68-VV-wQd"/>
@@ -74,7 +75,7 @@
                         <color key="backgroundColor" name="MainBG"/>
                         <constraints>
                             <constraint firstItem="wHf-7z-tMf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="258" id="W7y-I6-0gy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Png-DV-GKT" secondAttribute="top" constant="27" id="hi2-zr-Icw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Png-DV-GKT" secondAttribute="top" constant="-2" id="hi2-zr-Icw"/>
                             <constraint firstItem="wHf-7z-tMf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rAi-2c-caK"/>
                             <constraint firstItem="Png-DV-GKT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sdK-J0-wzf"/>
                         </constraints>
@@ -90,6 +91,56 @@
             </objects>
             <point key="canvasLocation" x="991.60305343511448" y="-34.507042253521128"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eek-Z1-4oW">
+            <objects>
+                <viewController id="bL5-R8-ZoX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XsY-o5-WgT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qui-19-f5O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fl7-RP-FqC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MaU-Zd-trc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4543" y="405"/>
+        </scene>
+        <!--Home Page Controller-->
+        <scene sceneID="0Xt-ft-NAg">
+            <objects>
+                <viewController storyboardIdentifier="HomePageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x0b-3u-lZ1" customClass="HomePageController" customModule="FoodOrderMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9uv-Gz-MNa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FIT-5e-nfQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wbw-TO-rOp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQT-hL-3xn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4543" y="-323"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="us4-Ah-Lgf">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fJe-U6-i2y" customClass="TabBarController" customModule="FoodOrderMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GQa-dC-ako">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="02p-02-m2j" kind="relationship" relationship="viewControllers" id="LFq-Po-sKv"/>
+                        <segue destination="tcE-vT-E2J" kind="relationship" relationship="viewControllers" id="Gg5-hh-8c0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34m-4X-EgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673" y="-20"/>
+        </scene>
         <!--Registration Page Controller-->
         <scene sceneID="ivV-a0-mm2">
             <objects>
@@ -99,7 +150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ohj-es-Vbt">
-                                <rect key="frame" x="31.666666666666657" y="87" width="330" height="200"/>
+                                <rect key="frame" x="31.666666666666657" y="58" width="330" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="arh-1M-JiX"/>
                                     <constraint firstAttribute="width" constant="330" id="yLD-Qy-ySa"/>
@@ -160,11 +211,12 @@
                         <color key="backgroundColor" name="MainBG"/>
                         <constraints>
                             <constraint firstItem="Ohj-es-Vbt" firstAttribute="centerX" secondItem="gVJ-T0-C7m" secondAttribute="centerX" id="9Cj-GY-PZq"/>
-                            <constraint firstItem="Ohj-es-Vbt" firstAttribute="top" secondItem="gVJ-T0-C7m" secondAttribute="top" constant="28" id="US9-4t-v9r"/>
+                            <constraint firstItem="Ohj-es-Vbt" firstAttribute="top" secondItem="gVJ-T0-C7m" secondAttribute="top" constant="-1" id="US9-4t-v9r"/>
                             <constraint firstItem="1SS-Dd-ZB4" firstAttribute="centerX" secondItem="Ohj-es-Vbt" secondAttribute="centerX" id="ZNW-y2-9fK"/>
-                            <constraint firstItem="1SS-Dd-ZB4" firstAttribute="top" secondItem="Ohj-es-Vbt" secondAttribute="bottom" constant="89" id="nca-hq-coJ"/>
+                            <constraint firstItem="1SS-Dd-ZB4" firstAttribute="top" secondItem="Ohj-es-Vbt" secondAttribute="bottom" constant="118" id="nca-hq-coJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fkO-iq-76f"/>
                     <connections>
                         <outlet property="emailTextField" destination="Hg0-ys-7dE" id="2vm-dI-29n"/>
                         <outlet property="fullnameTextField" destination="LCx-PG-GrR" id="pSh-8T-HcL"/>
@@ -175,12 +227,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxP-Z3-hnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="663"/>
+            <point key="canvasLocation" x="992" y="662"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ycs-Cn-ZtN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lqQ-J7-mOM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lqQ-J7-mOM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sqA-Zv-Mpf">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -195,6 +247,44 @@
             </objects>
             <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
         </scene>
+        <!--Item 1-->
+        <scene sceneID="W9J-S2-oNp">
+            <objects>
+                <navigationController storyboardIdentifier="homeNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="02p-02-m2j" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="iCe-q5-du1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZG7-rM-oCb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x0b-3u-lZ1" kind="relationship" relationship="rootViewController" id="aDK-fJ-DGc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMX-I3-lex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3579.3893129770991" y="-323.23943661971833"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="MgY-kd-jTr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tcE-vT-E2J" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" id="UIh-L7-5GK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yux-zU-COD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bL5-R8-ZoX" kind="relationship" relationship="rootViewController" id="HNP-Nc-oeu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlL-zh-cvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3579" y="405"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MainLogo" width="800" height="604"/>
@@ -207,5 +297,11 @@
         <namedColor name="SecondBG">
             <color red="0.53333333333333333" green="0.23529411764705882" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
