@@ -130,7 +130,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GQa-dC-ako">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </tabBar>
                     <connections>
                         <segue destination="02p-02-m2j" kind="relationship" relationship="viewControllers" id="LFq-Po-sKv"/>
@@ -247,11 +247,11 @@
             </objects>
             <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="W9J-S2-oNp">
             <objects>
                 <navigationController storyboardIdentifier="homeNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="02p-02-m2j" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="iCe-q5-du1"/>
+                    <tabBarItem key="tabBarItem" title="" image="Home" id="iCe-q5-du1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZG7-rM-oCb">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -266,11 +266,11 @@
             </objects>
             <point key="canvasLocation" x="3579.3893129770991" y="-323.23943661971833"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="MgY-kd-jTr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tcE-vT-E2J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="UIh-L7-5GK"/>
+                    <tabBarItem key="tabBarItem" title="" image="Cart" id="UIh-L7-5GK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yux-zU-COD">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -287,6 +287,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cart" width="20" height="21"/>
+        <image name="Home" width="20" height="17"/>
         <image name="MainLogo" width="800" height="604"/>
         <namedColor name="Button">
             <color red="0.90980392156862744" green="0.56470588235294117" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -300,8 +302,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
