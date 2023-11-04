@@ -22,7 +22,7 @@ class LoginPageController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-//        checkLogin()
+        checkLogin()
     }
     
     @IBAction func registerButton(_ sender: Any) {
@@ -64,14 +64,14 @@ extension LoginPageController {
         alertController.addAction(okayButton)
         self.present(alertController, animated: true)
     }
-//    
-//    func setRoot() {
-//        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-//           let sceneDelegate = scene.delegate as? SceneDelegate {
-//            UserDefaults.standard.setValue(true, forKey: "loggedIN") // Setting the flag
-//            sceneDelegate.homePage(windowScene: scene)
-//        }
-//    }
+    
+    func setRoot() {
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = scene.delegate as? SceneDelegate {
+            UserDefaults.standard.setValue(true, forKey: "loggedIN") // Setting the flag
+            sceneDelegate.homePage(windowScene: scene)
+        }
+    }
     
     func checkLogin() {
         if let loginEmail = emailTextField.text,
@@ -81,7 +81,7 @@ extension LoginPageController {
             helper.readUserData { users in
                 if users.contains(where: {$0.email == loginEmail && $0.password == loginPassword}) {
 //                    UserDefaults.standard.setValue(loginEmail, forKey: "email")
-//                    setRoot()
+                    setRoot()
                     let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
                     navigationController?.show(controller, sender: nil)
                 } else {
