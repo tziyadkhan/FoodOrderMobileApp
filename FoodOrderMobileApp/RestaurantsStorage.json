@@ -125,11 +125,11 @@
         "mealAmount": 0
     },
     {
-        "mealName": "Kimchi",
-        "mealImage": "kimchi",
+        "mealName": "Ebi Yaki",
+        "mealImage": "ebiyaki",
         "mealPrice": 24.50,
         "mealDiscount" : "10% Off",
-        "mealContent": "shrimps",
+        "mealContent": "rice, shrimps",
         "mealAmount": 0
     },
     {
@@ -260,27 +260,27 @@
         "mealAmount": 0
     },
     {
-        "mealName": "Turkish Doner",
-        "mealImage": "turkish",
+        "mealName": "Falafel",
+        "mealImage": "falafel",
         "mealPrice": 24.80,
         "mealDiscount" : "10% Off",
         "mealContent": "Meat,oninion,cheese,fri",
         "mealAmount": 0
     },
     {
-        "mealName": "Basdirma doner",
-        "mealImage": "azeri",
-        "mealPrice": 22.30,
+        "mealName": "Sandwich",
+        "mealImage": "sandwich",
+        "mealPrice": 15.30,
         "mealDiscount" : "10% Off",
-        "mealContent": "Meat,oninion,cheese,fri stuffed in bread",
+        "mealContent": "Meat,oninion,cheese,fri in bread",
         "mealAmount": 0
     },
     {
-        "mealName": "Iskander",
-        "mealImage": "iskander",
+        "mealName": "Lavash",
+        "mealImage": "lavash",
         "mealPrice": 10.50,
         "mealDiscount" : "10% Off",
-        "mealContent": "Meat, onion, tomato, rice",
+        "mealContent": "Meat, onion, tomato, lavash",
         "mealAmount": 0
     }
     ]
