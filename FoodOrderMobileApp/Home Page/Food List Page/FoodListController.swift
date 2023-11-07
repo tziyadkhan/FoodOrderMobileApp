@@ -9,23 +9,51 @@ import UIKit
 
 class FoodListController: UIViewController {
     
+    @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var searchBackground: UIView!
+    
     var foodlist = [MealModel]()
+    var backupFoodList = [MealModel]()
+    var searching = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(foodlist)
-        // Do any additional setup after loading the view.
+        searchBackground.layer.cornerRadius = 20
+        backupFoodList = foodlist
+
+    }
+
+    @IBAction func searchTextField(_ sender: UITextField) {
+        if let searchText = sender.text, !searchText.isEmpty {
+            searching = true
+            foodlist = foodlist.filter { food in
+                if let food = food.mealName {
+                    return food.lowercased().contains(searchText.lowercased())
+                }
+                return false
+            }
+        } else {
+            searching = false
+            foodlist.removeAll()
+            foodlist = backupFoodList
+        }
+        collection.reloadData()
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        foodlist.count
     }
-    */
-
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodListCell", for: indexPath) as! FoodListCell
+        cell.fillCell(name: foodlist[indexPath.item].mealName,
+                      image: foodlist[indexPath.item].mealImage,
+                      price: String("$ \(foodlist[indexPath.item].mealPrice ?? 0)"),
+                      discount: String(foodlist[indexPath.item].mealDiscount ?? "0"))
+        return cell
+    }
+    
 }

@@ -39,9 +39,7 @@ class RestaurantInfoController: UIViewController {
         restaurantWorkingHours.text = "Working hours: \(restaurant?.restaurantWorkingHours ?? "")"
         restaurantInfo.text = restaurant?.restaurantInfo
         restaurantInfo.layer.cornerRadius = 20
-        aboutLabel.text = "About \(restaurant?.restaurantName ?? "")"
-//        restaurantPromotionText.text = restaurant?.restaurantPromotionText
-        
+        aboutLabel.text = "About \(restaurant?.restaurantName ?? "")"        
     }
 
 }

@@ -7,49 +7,54 @@
     "restaurantWorkingHours" : "09:00AM - 23:30PM",
     "restaurantAdress" : "Baku, Nefchilar avenue",
     "restaurantRate" : "4.5 ★ (2500+)",
-    "restaurantPromotionText" : "Get 50% discount in your first order",
     "restaurantDistance" : "5.0km - 30min",
     "restaurantDeliveryTime" : "15-20min",
     "mealList": [
     {
         "mealName": "Bigfoot Burger",
         "mealImage": "bigfootBurger",
-        "mealPrice": 10,
+        "mealPrice": 10.00,
+        "mealDiscount" : "10% Off",
         "mealContent": "Kotlet, corek, holland pendiri",
         "mealAmount": 0
     },
     {
         "mealName": "Cheese Burger",
         "mealImage": "cheeseBurger",
-        "mealPrice": 12,
+        "mealPrice": 12.50,
+        "mealDiscount" : "5% Off",
         "mealContent": "Kotlet, corek, coxlu holland pendiri",
         "mealAmount": 0
     },
     {
         "mealName": "Meteor Burger",
         "mealImage": "meteorBurger",
-        "mealPrice": 13,
+        "mealPrice": 13.60,
+        "mealDiscount" : "8% Off",
         "mealContent": "Kotlet, corek, holland pendiri",
         "mealAmount": 0
     },
     {
         "mealName": "Beefcake Burger",
         "mealImage": "beefcakeBurger",
-        "mealPrice": 14,
+        "mealPrice": 14.40,
+        "mealDiscount" : "5% Off",
         "mealContent": "Mal etinden kotlet, corek, holland pendiri",
         "mealAmount": 0
     },
     {
         "mealName": "BBQ Burger",
         "mealImage": "bbqBurger",
-        "mealPrice": 14,
+        "mealPrice": 14.30,
+        "mealDiscount" : "8% Off",
         "mealContent": "Kotlet, corek, holland pendiri, barbekyu sousu",
         "mealAmount": 0
     },
     {
         "mealName": "Chicken Burger",
         "mealImage": "chickenBurger",
-        "mealPrice": 8,
+        "mealPrice": 8.70,
+        "mealDiscount" : "4% Off",
         "mealContent": "Toyuq etinden Kotlet, corek, holland pendiri",
         "mealAmount": 0
     }
@@ -63,35 +68,38 @@
     "restaurantWorkingHours" : "07:00AM - 22:30PM",
     "restaurantAdress" : "Baku, Winter Park",
     "restaurantRate" : "4.7 ★ (590+)",
-    "restaurantPromotionText" : "Get 45% discount, in your first order",
     "restaurantDistance" : "8km - 40min",
     "restaurantDeliveryTime" : "25-30min",
     "mealList": [
     {
         "mealName": "Tiramisu",
         "mealImage": "tiramisu",
-        "mealPrice": 20,
+        "mealPrice": 20.50,
+        "mealDiscount" : "10% Off",
         "mealContent": "Egg, sugar, coffee, milk, biscuits",
         "mealAmount": 0
     },
     {
         "mealName": "Cinnabon",
         "mealImage": "cinnabon",
-        "mealPrice": 24,
+        "mealPrice": 24.00,
+        "mealDiscount" : "10% Off",
         "mealContent": "Cinnamon, egg, flour, milk, curd",
         "mealAmount": 0
     },
     {
         "mealName": "Eclair",
         "mealImage": "eclair",
-        "mealPrice": 22,
+        "mealPrice": 22.00,
+        "mealDiscount" : "10% Off",
         "mealContent": "Egg, sugar, milk, flour",
         "mealAmount": 0
     },
     {
         "mealName": "Waffle",
         "mealImage": "waffle",
-        "mealPrice": 10,
+        "mealPrice": 10.50,
+        "mealDiscount" : "10% Off",
         "mealContent": "Egg, sugar, milk, flour",
         "mealAmount": 0
     }
@@ -105,35 +113,38 @@
     "restaurantWorkingHours" : "09:00AM - 00:00AM",
     "restaurantAdress" : "Baku, Malakan garden",
     "restaurantRate" : "4.3 ★ (540+)",
-    "restaurantPromotionText" : "Indulge in Asian culinary excellence with 15% off your bill! Don't miss out on this limited-time discount",
     "restaurantDistance" : "4.5km - 30min",
     "restaurantDeliveryTime" : "30-35min",
     "mealList": [
     {
         "mealName": "Sushi",
         "mealImage": "sushi",
-        "mealPrice": 20,
+        "mealPrice": 20.00,
+        "mealDiscount" : "10% Off",
         "mealContent": "raw fish, rice",
         "mealAmount": 0
     },
     {
         "mealName": "Kimchi",
         "mealImage": "kimchi",
-        "mealPrice": 24,
+        "mealPrice": 24.50,
+        "mealDiscount" : "10% Off",
         "mealContent": "shrimps",
         "mealAmount": 0
     },
     {
         "mealName": "Biryani",
         "mealImage": "biryani",
-        "mealPrice": 22,
+        "mealPrice": 22.80,
+        "mealDiscount" : "10% Off",
         "mealContent": "par-cooked rice, milk and ghee",
         "mealAmount": 0
     },
     {
         "mealName": "Ramen",
         "mealImage": "ramen",
-        "mealPrice": 10,
+        "mealPrice": 10.60,
+        "mealDiscount" : "10% Off",
         "mealContent": "nori, a marinated egg, scallions",
         "mealAmount": 0
     }
@@ -147,35 +158,38 @@
     "restaurantWorkingHours" : "09:00AM - 01:00AM",
     "restaurantAdress" : "Baku, Ganjlik Mall 2nd floor",
     "restaurantRate" : "4.4 ★ (764+)",
-    "restaurantPromotionText" : "🍝 Nonna's Kitchen & Trattoria Special Offer! Indulge in an Italian feast with 10% off your bill! Taste the love in every bite of our authentic dishes. Join us today to savor the flavors of Italy and enjoy exclusive savings. Buon appetito at Nonna's Kitchen & Trattoria!",
     "restaurantDistance" : "15km - 25min",
     "restaurantDeliveryTime" : "45-55min",
     "mealList": [
     {
         "mealName": "Risotto",
         "mealImage": "risotto",
-        "mealPrice": 20,
+        "mealPrice": 20.40,
+        "mealDiscount" : "10% Off",
         "mealContent": "Pumpkin, red radicchio, mushrooms, sausage or shellfish.",
         "mealAmount": 0
     },
     {
         "mealName": "Pasta",
         "mealImage": "pasta",
-        "mealPrice": 24,
+        "mealPrice": 24.00,
+        "mealDiscount" : "10% Off",
         "mealContent": "Spaghetti, bacon, egg yolk, and cheese",
         "mealAmount": 0
     },
     {
         "mealName": "Gnocchi",
         "mealImage": "gnocchi",
-        "mealPrice": 22,
+        "mealPrice": 22.00,
+        "mealDiscount" : "10% Off",
         "mealContent": "cheese, spinach, eggs, and a variety of sauces",
         "mealAmount": 0
     },
     {
         "mealName": "Pesto",
         "mealImage": "pesto",
-        "mealPrice": 10,
+        "mealPrice": 10.00,
+        "mealDiscount" : "10% Off",
         "mealContent": "Parmesan cheese, Pecorino cheese, pine nuts, garlic, and salt",
         "mealAmount": 0
     }
@@ -189,35 +203,38 @@
     "restaurantWorkingHours" : "09:00AM - 18:00PM",
     "restaurantAdress" : "Baku, DanizMall 4th floor",
     "restaurantRate" : "4.7 ★ (840+)",
-    "restaurantPromotionText" : "Nourish your body and soul with 15% off your meal",
     "restaurantDistance" : "800m - 5min",
     "restaurantDeliveryTime" : "20-25min",
     "mealList": [
     {
         "mealName": "Ghanaian Salad",
         "mealImage": "ghanaian",
-        "mealPrice": 20,
+        "mealPrice": 20.30,
+        "mealDiscount" : "10% Off",
         "mealContent": "Lettuce, tomatoes, carrots, cucumber, onions and baked beans.",
         "mealAmount": 0
     },
     {
         "mealName": "Fajita Steak Salad",
         "mealImage": "fajita",
-        "mealPrice": 24,
+        "mealPrice": 24.40,
+        "mealDiscount" : "10% Off",
         "mealContent": "Jack cheese, some fresh avocado",
         "mealAmount": 0
     },
     {
         "mealName": "Spinach Salad",
         "mealImage": "spinach",
-        "mealPrice": 22,
+        "mealPrice": 22.60,
+        "mealDiscount" : "10% Off",
         "mealContent": "Peppered bacon bits, hard-boiled eggs and caramelized mushrooms.",
         "mealAmount": 0
     },
     {
         "mealName": "Cobb-Wedge",
         "mealImage": "cobbWedge",
-        "mealPrice": 10,
+        "mealPrice": 10.60,
+        "mealDiscount" : "10% Off",
         "mealContent": "Cubed ham, hard-boiled eggs, diced avocados and edamame.",
         "mealAmount": 0
     }
@@ -231,35 +248,38 @@
     "restaurantWorkingHours" : "09:00AM - 23:30PM",
     "restaurantAdress" : "Baku, ParkBulvar",
     "restaurantRate" : "4.9 ★ (500+)",
-    "restaurantPromotionText" : "Embark on a Mediterranean culinary adventure with 10% off your bill",
     "restaurantDistance" : "6km - 15min",
     "restaurantDeliveryTime" : "30-35min",
     "mealList": [
     {
         "mealName": "Bavarian Doner",
         "mealImage": "bavarian",
-        "mealPrice": 20,
+        "mealPrice": 20.70,
+        "mealDiscount" : "10% Off",
         "mealContent": "Meat,oninion,cheese,fri",
         "mealAmount": 0
     },
     {
         "mealName": "Turkish Doner",
         "mealImage": "turkish",
-        "mealPrice": 24,
+        "mealPrice": 24.80,
+        "mealDiscount" : "10% Off",
         "mealContent": "Meat,oninion,cheese,fri",
         "mealAmount": 0
     },
     {
         "mealName": "Basdirma doner",
         "mealImage": "azeri",
-        "mealPrice": 22,
+        "mealPrice": 22.30,
+        "mealDiscount" : "10% Off",
         "mealContent": "Meat,oninion,cheese,fri stuffed in bread",
         "mealAmount": 0
     },
     {
         "mealName": "Iskander",
         "mealImage": "iskander",
-        "mealPrice": 10,
+        "mealPrice": 10.50,
+        "mealDiscount" : "10% Off",
         "mealContent": "Meat, onion, tomato, rice",
         "mealAmount": 0
     }

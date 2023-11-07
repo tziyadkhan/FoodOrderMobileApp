@@ -357,13 +357,136 @@
                     <view key="view" contentMode="scaleToFill" id="V5r-sE-0WM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Iq-TY-rwh">
+                                <rect key="frame" x="16" y="59" width="361" height="64"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for a food" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIV-Z6-6ic">
+                                        <rect key="frame" x="16" y="23" width="345" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="searchTextField:" destination="ZZf-C2-3Qb" eventType="editingChanged" id="SK0-Fs-SwO"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="GIV-Z6-6ic" secondAttribute="bottom" constant="15" id="Fiu-7p-shf"/>
+                                    <constraint firstItem="GIV-Z6-6ic" firstAttribute="trailing" secondItem="3Iq-TY-rwh" secondAttribute="trailingMargin" constant="8" id="HSN-lB-aRm"/>
+                                    <constraint firstAttribute="width" constant="361" id="MgI-dG-NBR"/>
+                                    <constraint firstAttribute="height" constant="64" id="ZUO-eg-bWM"/>
+                                    <constraint firstItem="GIV-Z6-6ic" firstAttribute="top" secondItem="3Iq-TY-rwh" secondAttribute="topMargin" constant="15" id="jnl-nY-cbO"/>
+                                    <constraint firstItem="GIV-Z6-6ic" firstAttribute="leading" secondItem="3Iq-TY-rwh" secondAttribute="leadingMargin" constant="8" id="uHK-j2-yVT"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d5n-iG-sXi">
+                                <rect key="frame" x="0.0" y="131" width="393" height="687"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nuX-T3-REo">
+                                    <size key="itemSize" width="160" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="25" minY="10" maxX="25" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="FoodListCell" reuseIdentifier="FoodListCell" id="fcQ-gJ-1y7" customClass="FoodListCell" customModule="FoodOrderMobileApp" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="10" width="160" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2vQ-Pq-6xH">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Dn-Az-yKG">
+                                                    <rect key="frame" x="0.0" y="20" width="160" height="180"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aED-UN-aaN">
+                                                            <rect key="frame" x="40" y="-17" width="80" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10% Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxi-ar-9Al">
+                                                                    <rect key="frame" x="12" y="6" width="56" height="18"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cheese Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeo-VS-Nog">
+                                                            <rect key="frame" x="8" y="126" width="144" height="18"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ 10.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0E-0M-vtC">
+                                                            <rect key="frame" x="8" y="151" width="80" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemGreenColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKB-qK-QOR">
+                                                            <rect key="frame" x="132" y="150" width="20" height="22"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" systemColor="systemGreenColor"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="addBasketButton:" destination="fcQ-gJ-1y7" eventType="touchUpInside" id="VFr-f6-ZKD"/>
+                                                            </connections>
+                                                        </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cheeseBurger" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-n0-HCc">
+                                                            <rect key="frame" x="25" y="18" width="110" height="110"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="160" height="200"/>
+                                        <connections>
+                                            <outlet property="background" destination="6Dn-Az-yKG" id="nAy-vt-QVY"/>
+                                            <outlet property="discountBackgroundView" destination="aED-UN-aaN" id="Umg-v4-BLK"/>
+                                            <outlet property="discountLabel" destination="vxi-ar-9Al" id="6hz-ke-tnd"/>
+                                            <outlet property="foodImage" destination="6Fo-n0-HCc" id="njS-A0-bUM"/>
+                                            <outlet property="foodNameLabel" destination="oeo-VS-Nog" id="hU6-Wl-6KR"/>
+                                            <outlet property="foodPriceLabel" destination="P0E-0M-vtC" id="qy5-Kg-Rmo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZZf-C2-3Qb" id="rlh-R1-YE7"/>
+                                    <outlet property="delegate" destination="ZZf-C2-3Qb" id="M59-eM-WEs"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xJW-Zj-dxG"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="3Iq-TY-rwh" firstAttribute="leading" secondItem="xJW-Zj-dxG" secondAttribute="leading" constant="16" id="0w1-qy-ExK"/>
+                            <constraint firstItem="xJW-Zj-dxG" firstAttribute="trailing" secondItem="d5n-iG-sXi" secondAttribute="trailing" id="CUu-uv-GTB"/>
+                            <constraint firstItem="xJW-Zj-dxG" firstAttribute="trailing" secondItem="3Iq-TY-rwh" secondAttribute="trailing" constant="16" id="Icj-sp-gt3"/>
+                            <constraint firstItem="3Iq-TY-rwh" firstAttribute="top" secondItem="xJW-Zj-dxG" secondAttribute="top" id="VpU-xa-3H0"/>
+                            <constraint firstItem="d5n-iG-sXi" firstAttribute="leading" secondItem="xJW-Zj-dxG" secondAttribute="leading" id="WKd-t7-JZ6"/>
+                            <constraint firstItem="xJW-Zj-dxG" firstAttribute="bottom" secondItem="d5n-iG-sXi" secondAttribute="bottom" id="ZXX-9V-K4y"/>
+                            <constraint firstItem="d5n-iG-sXi" firstAttribute="top" secondItem="3Iq-TY-rwh" secondAttribute="bottom" constant="8" symbolic="YES" id="faA-6r-O7d"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="d5n-iG-sXi" id="Vsg-XA-tOv"/>
+                        <outlet property="searchBackground" destination="3Iq-TY-rwh" id="kww-tc-FZD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wU2-NK-HeR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5865" y="1"/>
+            <point key="canvasLocation" x="5864.8854961832058" y="0.70422535211267612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="us4-Ah-Lgf">
@@ -533,7 +656,9 @@
         <image name="Home" width="20" height="17"/>
         <image name="MainLogo" width="800" height="604"/>
         <image name="burgerBoulevard" width="860" height="484"/>
+        <image name="cheeseBurger" width="829" height="515"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="Button">
             <color red="0.90980392156862744" green="0.56470588235294117" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -552,11 +677,14 @@
         <systemColor name="systemGray6Color">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

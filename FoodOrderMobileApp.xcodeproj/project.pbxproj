@@ -17,6 +17,7 @@
 		904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B92AF66D8E0062D897 /* TabBarController.swift */; };
 		904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BC2AF66DF80062D897 /* HomePageController.swift */; };
 		904942C02AF673970062D897 /* UserLoginFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BF2AF673970062D897 /* UserLoginFileManager.swift */; };
+		905334D32AFA9AF8002B0326 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905334D22AFA9AF8002B0326 /* FoodListCell.swift */; };
 		909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C6F2AF63E4900171515 /* AppDelegate.swift */; };
 		909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C712AF63E4900171515 /* SceneDelegate.swift */; };
 		909F8C772AF63E4900171515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909F8C752AF63E4900171515 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		904942B92AF66D8E0062D897 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		904942BC2AF66DF80062D897 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		904942BF2AF673970062D897 /* UserLoginFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginFileManager.swift; sourceTree = "<group>"; };
+		905334D22AFA9AF8002B0326 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
 		909F8C6C2AF63E4900171515 /* FoodOrderMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909F8C6F2AF63E4900171515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909F8C712AF63E4900171515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				903AA9E62AFA59D100829DC8 /* FoodListController.swift */,
+				905334D22AFA9AF8002B0326 /* FoodListCell.swift */,
 			);
 			path = "Food List Page";
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */,
 				909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */,
 				909F8C882AF63EAA00171515 /* RegistrationPageController.swift in Sources */,
+				905334D32AFA9AF8002B0326 /* FoodListCell.swift in Sources */,
 				904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */,
 				904942B52AF65A0D0062D897 /* User.swift in Sources */,
 				909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */,

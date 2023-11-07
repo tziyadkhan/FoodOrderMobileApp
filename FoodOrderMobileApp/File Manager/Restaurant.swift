@@ -15,7 +15,6 @@ struct RestaurantModel: Codable {
     var restaurantWorkingHours: String?
     var restaurantAdress: String?
     var restaurantRate: String?
-    var restaurantPromotionText: String?
     var restaurantDistance: String?
     var restaurantDeliveryTime: String?
     var mealList: [MealModel]?
@@ -24,7 +23,8 @@ struct RestaurantModel: Codable {
 struct MealModel: Codable {
     var mealName: String?
     var mealImage: String?
-    var mealPrice: Int?
+    var mealPrice: Double?
+    var mealDiscount: String?
     var mealContent: String?
     var mealAmount: Int?
 }
