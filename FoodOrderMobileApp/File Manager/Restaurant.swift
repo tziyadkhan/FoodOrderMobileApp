@@ -9,11 +9,15 @@ import Foundation
 
 struct RestaurantModel: Codable {
     var restaurantName: String?
+    var restaurantSlogan: String?
     var restaurantImage: String?
     var restaurantInfo: String?
     var restaurantWorkingHours: String?
+    var restaurantAdress: String?
+    var restaurantRate: String?
     var restaurantPromotionText: String?
-    var restaurantPromotionImage: String?
+    var restaurantDistance: String?
+    var restaurantDeliveryTime: String?
     var mealList: [MealModel]?
 }
 

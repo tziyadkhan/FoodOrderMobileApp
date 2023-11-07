@@ -1,11 +1,15 @@
 [
  {
     "restaurantName": "Burger Boulevard",
+    "restaurantSlogan" : "Probably the best burger you ever had in town",
     "restaurantImage": "burgerBoulevard",
-    "restaurantInfo": "heleki bir text yoxdu",
-    "restaurantWorkingHours" : "09:00AM - 18:00PM",
-    "restaurantPromotionText" : "",
-    "restaurantPromotionImage" : "",
+    "restaurantInfo": "Burger Boulevard is a newly established burger cafe that takes pride in serving mouthwatering burgers. With a commitment to culinary excellence and a passion for crafting delicious, one-of-a-kind burgers, Burger Boulevard has quickly become a favorite among burger enthusiasts. The menu features a diverse selection of burger options, from classic beef patties to creative plant-based alternatives, all accompanied by a variety of fresh toppings, house-made sauces, and perfectly crispy fries. The ambiance at Burger Boulevard is cozy and welcoming, providing the perfect setting to savor the perfect burger experience. Whether you're a carnivore or a plant-based connoisseur, Burger Boulevard is where burger dreams come to life.",
+    "restaurantWorkingHours" : "09:00AM - 23:30PM",
+    "restaurantAdress" : "Baku, Nefchilar avenue",
+    "restaurantRate" : "4.5 ★ (2500+)",
+    "restaurantPromotionText" : "Get 50% discount in your first order",
+    "restaurantDistance" : "5.0km - 30min",
+    "restaurantDeliveryTime" : "15-20min",
     "mealList": [
     {
         "mealName": "Bigfoot Burger",
@@ -53,11 +57,15 @@
 },
  {
     "restaurantName": "The Dessert Oasis",
+    "restaurantSlogan" : "Indulge Your Sweet Dreams",
     "restaurantImage": "dessertOasis",
-    "restaurantInfo": "heleki bir text yoxdu",
-    "restaurantWorkingHours" : "09:00AM - 18:00PM",
-    "restaurantPromotionText" : "",
-    "restaurantPromotionImage" : "",
+    "restaurantInfo": "Dessert Oasis is a sweet haven for those with a passion for delectable desserts. Established in 2018, this enchanting dessert cafe has quickly gained a reputation for serving an array of mouthwatering treats that satisfy every sweet craving. From creamy, handcrafted gelato to decadent cakes and pastries, Dessert Oasis offers a diverse selection of confections to please every palate. The cafe's warm and inviting atmosphere, adorned with cozy seating and delightful decor, provides the perfect setting for indulging in delightful sweets. Whether you're celebrating a special occasion or simply craving a sweet escape, Dessert Oasis is where you can discover a world of tasty desserts that transport your taste buds to a sweet, sugary paradise.",
+    "restaurantWorkingHours" : "07:00AM - 22:30PM",
+    "restaurantAdress" : "Baku, Winter Park",
+    "restaurantRate" : "4.7 ★ (590+)",
+    "restaurantPromotionText" : "Get 45% discount, in your first order",
+    "restaurantDistance" : "8km - 40min",
+    "restaurantDeliveryTime" : "25-30min",
     "mealList": [
     {
         "mealName": "Tiramisu",
@@ -91,11 +99,15 @@
 },
  {
     "restaurantName": "Sushi Samurai Savor",
+    "restaurantSlogan" : "Unleash the Flavors of the East",
     "restaurantImage": "sushiSamuraiSavor",
-    "restaurantInfo": "heleki bir text yoxdu",
-    "restaurantWorkingHours" : "09:00AM - 18:00PM",
-    "restaurantPromotionText" : "",
-    "restaurantPromotionImage" : "",
+    "restaurantInfo": "Sushi Samurai Savor is an Asian culinary gem that has been tantalizing taste buds since 2015. This unique establishment goes beyond traditional sushi by combining the artistry of Japanese cuisine with a rich tapestry of Asian flavors. With an extensive menu that includes masterfully crafted sushi rolls, sashimi, tempura, and a variety of delectable dishes, Sushi Samurai Savor invites you to embark on a culinary journey through the East. The restaurant's ambiance is a perfect blend of modern elegance and traditional charm, making it an inviting space for those seeking an authentic Asian dining experience. Whether you're a sushi enthusiast or an adventurer of Asian cuisine, Sushi Samurai Savor beckons you to savor the flavors of the East, one dish at a time.",
+    "restaurantWorkingHours" : "09:00AM - 00:00AM",
+    "restaurantAdress" : "Baku, Malakan garden",
+    "restaurantRate" : "4.3 ★ (540+)",
+    "restaurantPromotionText" : "Indulge in Asian culinary excellence with 15% off your bill! Don't miss out on this limited-time discount",
+    "restaurantDistance" : "4.5km - 30min",
+    "restaurantDeliveryTime" : "30-35min",
     "mealList": [
     {
         "mealName": "Sushi",
@@ -129,11 +141,15 @@
 },
  {
     "restaurantName": "Nonna's Kitchen & Trattoria",
+    "restaurantSlogan" : "Where Tradition Meets Taste",
     "restaurantImage": "nonnasKitchen",
-    "restaurantInfo": "heleki bir text yoxdu",
-    "restaurantWorkingHours" : "09:00AM - 18:00PM",
-    "restaurantPromotionText" : "",
-    "restaurantPromotionImage" : "",
+    "restaurantInfo": " Nonna's Kitchen & Trattoria is a beloved Italian culinary treasure that has been delighting diners since its establishment in 2005. This family-owned restaurant takes pride in serving authentic Italian cuisine, prepared with love and care, just like Nonna (grandmother) used to make. The menu at Nonna's Kitchen & Trattoria features a delectable array of pasta dishes, wood-fired pizzas, hearty risottos, and traditional Italian specialties that transport you straight to the heart of Italy. The cozy, rustic ambiance of the trattoria, adorned with warm colors and vintage decor, provides the perfect backdrop for a heartwarming and memorable dining experience. At Nonna's Kitchen & Trattoria, every meal is a celebration of tradition, flavor, and the Italian way of life. Mangia!",
+    "restaurantWorkingHours" : "09:00AM - 01:00AM",
+    "restaurantAdress" : "Baku, Ganjlik Mall 2nd floor",
+    "restaurantRate" : "4.4 ★ (764+)",
+    "restaurantPromotionText" : "🍝 Nonna's Kitchen & Trattoria Special Offer! Indulge in an Italian feast with 10% off your bill! Taste the love in every bite of our authentic dishes. Join us today to savor the flavors of Italy and enjoy exclusive savings. Buon appetito at Nonna's Kitchen & Trattoria!",
+    "restaurantDistance" : "15km - 25min",
+    "restaurantDeliveryTime" : "45-55min",
     "mealList": [
     {
         "mealName": "Risotto",
@@ -167,11 +183,15 @@
 },
  {
     "restaurantName": "CleanPlate Dining",
+    "restaurantSlogan" : "Eat Well, Live Well – CleanPlate Dining",
     "restaurantImage": "cleanPlate",
-    "restaurantInfo": "heleki bir text yoxdu",
+    "restaurantInfo": "CleanPlate Dining is a culinary oasis dedicated to serving wholesome and nutritious cuisine. Established in 2019, this restaurant is a haven for those who seek healthy, flavorful dining options. The menu at CleanPlate Dining features a diverse range of dishes, including fresh salads, lean proteins, and plant-based creations, all carefully crafted to cater to health-conscious diners. The restaurant's commitment to using locally sourced, organic ingredients ensures that every meal is a nourishing and guilt-free delight. The dining environment is a reflection of the restaurant's mission, with a clean and welcoming ambiance that complements the freshness of the cuisine. At CleanPlate Dining, every bite is a step toward a healthier, happier you.",
     "restaurantWorkingHours" : "09:00AM - 18:00PM",
-    "restaurantPromotionText" : "",
-    "restaurantPromotionImage" : "",
+    "restaurantAdress" : "Baku, DanizMall 4th floor",
+    "restaurantRate" : "4.7 ★ (840+)",
+    "restaurantPromotionText" : "Nourish your body and soul with 15% off your meal",
+    "restaurantDistance" : "800m - 5min",
+    "restaurantDeliveryTime" : "20-25min",
     "mealList": [
     {
         "mealName": "Ghanaian Salad",
@@ -205,11 +225,15 @@
 },
  {
     "restaurantName": "Mediterranean Munch",
+    "restaurantSlogan" : "Where Mediterranean Flavors Come to Life",
     "restaurantImage": "mediterraneanMunch",
-    "restaurantInfo": "heleki bir text yoxdu",
-    "restaurantWorkingHours" : "09:00AM - 18:00PM",
-    "restaurantPromotionText" : "",
-    "restaurantPromotionImage" : "",
+    "restaurantInfo": "Mediterranean Munch is a culinary gem that transports your taste buds to the sun-soaked shores of the Mediterranean. Established in 2015, this restaurant specializes in serving a delectable array of Mediterranean delights, including mouthwatering kebabs, flavorful doner, and a diverse range of Turkish cuisine. The menu at Mediterranean Munch showcases the rich tapestry of Mediterranean flavors, featuring fresh and wholesome ingredients that make every meal an exotic journey. The restaurant's inviting ambiance, adorned with warm colors and Mediterranean-inspired decor, creates the perfect setting for diners to savor the culinary treasures of the Mediterranean. At Mediterranean Munch, every dish is a passport to the Mediterranean, offering a taste of its vibrant and diverse cuisine.",
+    "restaurantWorkingHours" : "09:00AM - 23:30PM",
+    "restaurantAdress" : "Baku, ParkBulvar",
+    "restaurantRate" : "4.9 ★ (500+)",
+    "restaurantPromotionText" : "Embark on a Mediterranean culinary adventure with 10% off your bill",
+    "restaurantDistance" : "6km - 15min",
+    "restaurantDeliveryTime" : "30-35min",
     "mealList": [
     {
         "mealName": "Bavarian Doner",

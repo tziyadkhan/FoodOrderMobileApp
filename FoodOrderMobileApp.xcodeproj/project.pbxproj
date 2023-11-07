@@ -10,6 +10,9 @@
 		903AA9D62AFA116F00829DC8 /* RestaurantsStorage.json in Resources */ = {isa = PBXBuildFile; fileRef = 903AA9D52AFA116F00829DC8 /* RestaurantsStorage.json */; };
 		903AA9D82AFA11AE00829DC8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903AA9D72AFA11AE00829DC8 /* Restaurant.swift */; };
 		903AA9DB2AFA12E700829DC8 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903AA9DA2AFA12E700829DC8 /* Parser.swift */; };
+		903AA9DF2AFA1A1A00829DC8 /* RestaurantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903AA9DE2AFA1A1A00829DC8 /* RestaurantsCell.swift */; };
+		903AA9E42AFA2A7500829DC8 /* RestaurantInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903AA9E32AFA2A7500829DC8 /* RestaurantInfoController.swift */; };
+		903AA9E72AFA59D100829DC8 /* FoodListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903AA9E62AFA59D100829DC8 /* FoodListController.swift */; };
 		904942B52AF65A0D0062D897 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B42AF65A0D0062D897 /* User.swift */; };
 		904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B92AF66D8E0062D897 /* TabBarController.swift */; };
 		904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BC2AF66DF80062D897 /* HomePageController.swift */; };
@@ -27,6 +30,9 @@
 		903AA9D52AFA116F00829DC8 /* RestaurantsStorage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RestaurantsStorage.json; sourceTree = "<group>"; };
 		903AA9D72AFA11AE00829DC8 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		903AA9DA2AFA12E700829DC8 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		903AA9DE2AFA1A1A00829DC8 /* RestaurantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsCell.swift; sourceTree = "<group>"; };
+		903AA9E32AFA2A7500829DC8 /* RestaurantInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfoController.swift; sourceTree = "<group>"; };
+		903AA9E62AFA59D100829DC8 /* FoodListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListController.swift; sourceTree = "<group>"; };
 		904942B42AF65A0D0062D897 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		904942B92AF66D8E0062D897 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		904942BC2AF66DF80062D897 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
@@ -61,6 +67,22 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		903AA9E02AFA293400829DC8 /* Restaurant Info Page */ = {
+			isa = PBXGroup;
+			children = (
+				903AA9E32AFA2A7500829DC8 /* RestaurantInfoController.swift */,
+			);
+			path = "Restaurant Info Page";
+			sourceTree = "<group>";
+		};
+		903AA9E52AFA59AA00829DC8 /* Food List Page */ = {
+			isa = PBXGroup;
+			children = (
+				903AA9E62AFA59D100829DC8 /* FoodListController.swift */,
+			);
+			path = "Food List Page";
+			sourceTree = "<group>";
+		};
 		904942B32AF659530062D897 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				904942BC2AF66DF80062D897 /* HomePageController.swift */,
+				903AA9DE2AFA1A1A00829DC8 /* RestaurantsCell.swift */,
+				903AA9E02AFA293400829DC8 /* Restaurant Info Page */,
+				903AA9E52AFA59AA00829DC8 /* Food List Page */,
 			);
 			path = "Home Page";
 			sourceTree = "<group>";
@@ -113,18 +138,18 @@
 		909F8C6E2AF63E4900171515 /* FoodOrderMobileApp */ = {
 			isa = PBXGroup;
 			children = (
-				904942BB2AF66DE00062D897 /* Home Page */,
 				909F8C832AF63E5F00171515 /* Login Page */,
 				909F8C862AF63E9000171515 /* Registration Page */,
-				909F8C752AF63E4900171515 /* Main.storyboard */,
+				904942BB2AF66DE00062D897 /* Home Page */,
 				904942B32AF659530062D897 /* DataManager */,
 				904942BE2AF673800062D897 /* File Manager */,
-				909F8C7D2AF63E4A00171515 /* Info.plist */,
 				903AA9D92AFA12DE00829DC8 /* Parser */,
 				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
 				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
+				909F8C752AF63E4900171515 /* Main.storyboard */,
 				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
 				909F8C782AF63E4A00171515 /* Assets.xcassets */,
+				909F8C7D2AF63E4A00171515 /* Info.plist */,
 				903AA9D52AFA116F00829DC8 /* RestaurantsStorage.json */,
 				904942B82AF66D720062D897 /* Tab Bar Controller */,
 			);
@@ -220,7 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				904942C02AF673970062D897 /* UserLoginFileManager.swift in Sources */,
+				903AA9DF2AFA1A1A00829DC8 /* RestaurantsCell.swift in Sources */,
+				903AA9E42AFA2A7500829DC8 /* RestaurantInfoController.swift in Sources */,
 				909F8C852AF63E7B00171515 /* LoginPageController.swift in Sources */,
+				903AA9E72AFA59D100829DC8 /* FoodListController.swift in Sources */,
 				903AA9DB2AFA12E700829DC8 /* Parser.swift in Sources */,
 				904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */,
 				909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */,
