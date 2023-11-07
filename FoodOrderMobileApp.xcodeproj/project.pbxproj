@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903AA9D62AFA116F00829DC8 /* RestaurantsStorage.json in Resources */ = {isa = PBXBuildFile; fileRef = 903AA9D52AFA116F00829DC8 /* RestaurantsStorage.json */; };
+		903AA9D82AFA11AE00829DC8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903AA9D72AFA11AE00829DC8 /* Restaurant.swift */; };
+		903AA9DB2AFA12E700829DC8 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903AA9DA2AFA12E700829DC8 /* Parser.swift */; };
 		904942B52AF65A0D0062D897 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B42AF65A0D0062D897 /* User.swift */; };
 		904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B92AF66D8E0062D897 /* TabBarController.swift */; };
 		904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BC2AF66DF80062D897 /* HomePageController.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		903AA9D52AFA116F00829DC8 /* RestaurantsStorage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RestaurantsStorage.json; sourceTree = "<group>"; };
+		903AA9D72AFA11AE00829DC8 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		903AA9DA2AFA12E700829DC8 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		904942B42AF65A0D0062D897 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		904942B92AF66D8E0062D897 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		904942BC2AF66DF80062D897 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		903AA9D92AFA12DE00829DC8 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				903AA9DA2AFA12E700829DC8 /* Parser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
 		904942B32AF659530062D897 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				904942BF2AF673970062D897 /* UserLoginFileManager.swift */,
+				903AA9D72AFA11AE00829DC8 /* Restaurant.swift */,
 			);
 			path = "File Manager";
 			sourceTree = "<group>";
@@ -105,10 +120,12 @@
 				904942B32AF659530062D897 /* DataManager */,
 				904942BE2AF673800062D897 /* File Manager */,
 				909F8C7D2AF63E4A00171515 /* Info.plist */,
+				903AA9D92AFA12DE00829DC8 /* Parser */,
 				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
 				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
 				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
 				909F8C782AF63E4A00171515 /* Assets.xcassets */,
+				903AA9D52AFA116F00829DC8 /* RestaurantsStorage.json */,
 				904942B82AF66D720062D897 /* Tab Bar Controller */,
 			);
 			path = FoodOrderMobileApp;
@@ -191,6 +208,7 @@
 				909F8C7C2AF63E4A00171515 /* LaunchScreen.storyboard in Resources */,
 				909F8C792AF63E4A00171515 /* Assets.xcassets in Resources */,
 				909F8C772AF63E4900171515 /* Main.storyboard in Resources */,
+				903AA9D62AFA116F00829DC8 /* RestaurantsStorage.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,12 +221,14 @@
 			files = (
 				904942C02AF673970062D897 /* UserLoginFileManager.swift in Sources */,
 				909F8C852AF63E7B00171515 /* LoginPageController.swift in Sources */,
+				903AA9DB2AFA12E700829DC8 /* Parser.swift in Sources */,
 				904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */,
 				909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */,
 				909F8C882AF63EAA00171515 /* RegistrationPageController.swift in Sources */,
 				904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */,
 				904942B52AF65A0D0062D897 /* User.swift in Sources */,
 				909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */,
+				903AA9D82AFA11AE00829DC8 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
