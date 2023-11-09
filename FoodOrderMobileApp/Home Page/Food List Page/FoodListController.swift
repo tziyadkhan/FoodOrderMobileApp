@@ -51,8 +51,8 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodListCell", for: indexPath) as! FoodListCell
         cell.fillCell(name: foodlist[indexPath.item].mealName,
                       image: foodlist[indexPath.item].mealImage,
-                      price: String("$ \(foodlist[indexPath.item].mealPrice ?? 0)"),
-                      discount: String(foodlist[indexPath.item].mealDiscount ?? "0"))
+                      price: String("$ \(foodlist[indexPath.item].mealPrice ?? 0)"), 
+                      amount: String(foodlist[indexPath.item].mealAmount ?? 0))
         return cell
     }
     

@@ -27,4 +27,5 @@ struct MealModel: Codable {
     var mealDiscount: String?
     var mealContent: String?
     var mealAmount: Int?
+    var mealDeliveryFee: String?
 }
