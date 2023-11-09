@@ -12,7 +12,7 @@ class HomePageController: UIViewController {
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBackground: UIView!
     
-    let helper = UserLoginFileManager()
+//    let helper = UserLoginFileManager()
     var items = [RestaurantModel]()
     let parser = Parser()
     var searching = false

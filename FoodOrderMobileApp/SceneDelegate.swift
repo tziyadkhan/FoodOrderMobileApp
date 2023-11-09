@@ -23,17 +23,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func homePage(windowScene: UIWindowScene) {
-        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+//        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
 //        let navVC = UINavigationController(rootViewController: controller)
-        self.window?.rootViewController = controller
+//        self.window?.rootViewController = controller
+        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         self.window?.makeKeyAndVisible()
     }
     
     func loginPage(windowScene: UIWindowScene) {
         
-        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginPageController") as! LoginPageController
-//        let navVC = UINavigationController(rootViewController: controller)
-        self.window?.rootViewController = controller
+//        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginPageController") as! LoginPageController
+// //       let navVC = UINavigationController(rootViewController: controller)
+//        self.window?.rootViewController = controller
+        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginNav") as! UINavigationController
         self.window?.makeKeyAndVisible()
     }
 

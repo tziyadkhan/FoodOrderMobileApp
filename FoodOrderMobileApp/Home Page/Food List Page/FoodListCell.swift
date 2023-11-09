@@ -15,6 +15,10 @@ class FoodListCell: UICollectionViewCell {
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var foodAmountLabel: UILabel!
     
+    var foodAmountCallBack: ((_ amount: Int) -> Void)?
+    var addToBasketCallBack: (() -> Void)?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         background.layer.cornerRadius = 20
@@ -27,10 +31,23 @@ class FoodListCell: UICollectionViewCell {
     
     @IBAction func addAmount(_ sender: Any) {
         print("plus")
+        let amount = self.foodAmountLabel.text ?? "0"
+        var count: Int = Int(amount) ?? 0
+        count += 1
+        foodAmountCallBack?(count)
     }
     
     @IBAction func subtractAmount(_ sender: Any) {
         print("minus")
+        let amount = self.foodAmountLabel.text ?? "0"
+        var count: Int = Int(amount) ?? 0
+        if count == 0 {
+            
+        } else {
+            count -= 1
+        }
+        
+        foodAmountCallBack?(count)
     }
     
     

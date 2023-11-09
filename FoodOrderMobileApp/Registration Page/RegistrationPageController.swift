@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RegistrationPageController: UIViewController {
 
@@ -15,23 +16,24 @@ class RegistrationPageController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signupBackground: UIButton!
     
-    let helper = UserLoginFileManager()
-    var users = [User]()
+//    let helper = UserLoginFileManager()
+    var user: User?
+    let realm = try! Realm()
+    
     var onLogin: ((String?, String?) -> Void)?
-    var onUserReg: ((User) -> Void)?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
-        
-        helper.readUserData { userItems in
-            self.users = userItems
-        }
+
     }
     
 
     @IBAction func registerButton(_ sender: Any) {
         regUser()
+        Database.saveToDB(user: self.user!, Database: self.realm)  //tema
+        print(self.realm.configuration.fileURL!)
     }
 }
 
@@ -40,13 +42,12 @@ class RegistrationPageController: UIViewController {
 extension RegistrationPageController {
     func regUser() {
         onLogin?(emailTextField.text, passwordTextField.text)
-        let user = User(fullname: fullnameTextField.text ?? "",
-                        email: emailTextField.text ?? "",
-                        phonenumber: phonenumberTextField.text ?? "",
-                        password: passwordTextField.text ?? "")
-        onUserReg?(user)
-        users.append(user)
-        helper.writeUserData(users: users)
+        self.user = User(fullname: fullnameTextField.text!,
+                        email: emailTextField.text!,
+                        phonenumber: phonenumberTextField.text!,
+                        password: passwordTextField.text!,
+                        purchaseList: Purchase())
+
         navigationController?.popViewController(animated: true)
     }
     

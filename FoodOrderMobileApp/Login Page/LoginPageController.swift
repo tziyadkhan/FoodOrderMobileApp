@@ -6,28 +6,33 @@
 //
 
 import UIKit
-
+import RealmSwift
 class LoginPageController: UIViewController {
-
+    
     @IBOutlet weak var loginButtonView: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    var userLogin = User()
-    let helper = UserLoginFileManager()
+    
+    
+    var userLoginList: [User] = Database.fetchFromDB(Database: try! Realm())
+    var realm = try! Realm()
+    //    let helper = UserLoginFileManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
-
+        print(userLoginList)
+        
     }
     
     @IBAction func loginButton(_ sender: Any) {
+        print("aue")
         checkLogin()
     }
     
     @IBAction func registerButton(_ sender: Any) {
         registrationPage()
-
+        
     }
 }
 
@@ -40,10 +45,6 @@ extension LoginPageController {
         controller.onLogin = { email, password in
             self.emailTextField.text = email
             self.passwordTextField.text = password
-        }
-        
-        controller.onUserReg = { user in
-            self.userLogin = user
         }
         
         navigationController?.show(controller, sender: nil)
@@ -74,22 +75,24 @@ extension LoginPageController {
     }
     
     func checkLogin() {
+        
         if let loginEmail = emailTextField.text,
            let loginPassword = passwordTextField.text,
            !loginEmail.isEmpty,
            !loginPassword.isEmpty {
-            helper.readUserData { users in
-                if users.contains(where: {$0.email == loginEmail && $0.password == loginPassword}) {
-//                    UserDefaults.standard.setValue(loginEmail, forKey: "email")
-                    setRoot()
-                    let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-                    navigationController?.show(controller, sender: nil)
-                } else {
-                    showAlert(title: "Xəta", message: "Email və ya şifrə düzgün qeyd edilməyib")
-                }
+            if userLoginList.contains(where: {$0.email == loginEmail && $0.password == loginPassword}) {
+                self.setRoot()
+                UserDefaults.standard.set(loginEmail, forKey: "enteredEmail")
+                let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+                navigationController?.show(controller, sender: nil)
+            } else {
+                showAlert(title: "Xəta", message: "Email və ya şifrə düzgün qeyd edilməyib")
             }
-        } else {
-            showAlert(title: "Xəta", message: "Email və ya şifrə daxil edilməyib")
+        }else {
+            showAlert(title: "Xəta", message: "Bosh melumat daxil olunub")
         }
+        
     }
+    
+    
 }

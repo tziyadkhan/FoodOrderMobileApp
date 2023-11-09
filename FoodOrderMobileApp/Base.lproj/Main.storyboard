@@ -167,6 +167,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="orderNowButton:" destination="bL5-R8-ZoX" eventType="touchUpInside" id="RBj-7e-ujZ"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mgl-TL-cQK">
                                 <rect key="frame" x="16" y="571" width="361" height="128"/>
@@ -219,6 +222,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cart" id="fl7-RP-FqC"/>
                     <connections>
+                        <outlet property="foodDeliveryAmountLabel" destination="prZ-UP-mhg" id="LCj-H0-XoA"/>
+                        <outlet property="foodTotalAmount" destination="fhd-vp-Bo6" id="6dg-eL-h4k"/>
                         <outlet property="table" destination="xs4-kA-s1m" id="big-gB-lxh"/>
                     </connections>
                 </viewController>

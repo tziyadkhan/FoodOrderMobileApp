@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct RestaurantModel: Codable {
+class RestaurantModel: Codable {
     var restaurantName: String?
     var restaurantSlogan: String?
     var restaurantImage: String?
@@ -20,12 +21,3 @@ struct RestaurantModel: Codable {
     var mealList: [MealModel]?
 }
 
-struct MealModel: Codable {
-    var mealName: String?
-    var mealImage: String?
-    var mealPrice: Double?
-    var mealDiscount: String?
-    var mealContent: String?
-    var mealAmount: Int?
-    var mealDeliveryFee: String?
-}

@@ -16,7 +16,6 @@
 		904942B52AF65A0D0062D897 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B42AF65A0D0062D897 /* User.swift */; };
 		904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B92AF66D8E0062D897 /* TabBarController.swift */; };
 		904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BC2AF66DF80062D897 /* HomePageController.swift */; };
-		904942C02AF673970062D897 /* UserLoginFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BF2AF673970062D897 /* UserLoginFileManager.swift */; };
 		905334D32AFA9AF8002B0326 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905334D22AFA9AF8002B0326 /* FoodListCell.swift */; };
 		909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C6F2AF63E4900171515 /* AppDelegate.swift */; };
 		909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C712AF63E4900171515 /* SceneDelegate.swift */; };
@@ -27,6 +26,11 @@
 		909F8C882AF63EAA00171515 /* RegistrationPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C872AF63EAA00171515 /* RegistrationPageController.swift */; };
 		90B5646B2AFCD8DA0082D9E7 /* BasketPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5646A2AFCD8DA0082D9E7 /* BasketPageController.swift */; };
 		90B5646F2AFCD91D0082D9E7 /* BasketListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5646E2AFCD91D0082D9E7 /* BasketListCell.swift */; };
+		90B564722AFCF4D40082D9E7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 90B564712AFCF4D40082D9E7 /* Realm */; };
+		90B564742AFCF4D40082D9E7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90B564732AFCF4D40082D9E7 /* RealmSwift */; };
+		90B564782AFD01850082D9E7 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B564772AFD01850082D9E7 /* Database.swift */; };
+		90B5647A2AFD069F0082D9E7 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B564792AFD069F0082D9E7 /* Purchase.swift */; };
+		90B5647E2AFD1BCA0082D9E7 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5647D2AFD1BCA0082D9E7 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +43,6 @@
 		904942B42AF65A0D0062D897 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		904942B92AF66D8E0062D897 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		904942BC2AF66DF80062D897 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
-		904942BF2AF673970062D897 /* UserLoginFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginFileManager.swift; sourceTree = "<group>"; };
 		905334D22AFA9AF8002B0326 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
 		909F8C6C2AF63E4900171515 /* FoodOrderMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909F8C6F2AF63E4900171515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +55,9 @@
 		909F8C872AF63EAA00171515 /* RegistrationPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPageController.swift; sourceTree = "<group>"; };
 		90B5646A2AFCD8DA0082D9E7 /* BasketPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPageController.swift; sourceTree = "<group>"; };
 		90B5646E2AFCD91D0082D9E7 /* BasketListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketListCell.swift; sourceTree = "<group>"; };
+		90B564772AFD01850082D9E7 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		90B564792AFD069F0082D9E7 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		90B5647D2AFD1BCA0082D9E7 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B564742AFCF4D40082D9E7 /* RealmSwift in Frameworks */,
+				90B564722AFCF4D40082D9E7 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,14 +98,6 @@
 			path = "Food List Page";
 			sourceTree = "<group>";
 		};
-		904942B32AF659530062D897 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				904942B42AF65A0D0062D897 /* User.swift */,
-			);
-			path = DataManager;
-			sourceTree = "<group>";
-		};
 		904942B82AF66D720062D897 /* Tab Bar Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,13 +117,16 @@
 			path = "Home Page";
 			sourceTree = "<group>";
 		};
-		904942BE2AF673800062D897 /* File Manager */ = {
+		904942BE2AF673800062D897 /* Data Manager */ = {
 			isa = PBXGroup;
 			children = (
-				904942BF2AF673970062D897 /* UserLoginFileManager.swift */,
+				904942B42AF65A0D0062D897 /* User.swift */,
 				903AA9D72AFA11AE00829DC8 /* Restaurant.swift */,
+				90B5647D2AFD1BCA0082D9E7 /* Meal.swift */,
+				90B564792AFD069F0082D9E7 /* Purchase.swift */,
+				90B564772AFD01850082D9E7 /* Database.swift */,
 			);
-			path = "File Manager";
+			path = "Data Manager";
 			sourceTree = "<group>";
 		};
 		909F8C632AF63E4900171515 = {
@@ -148,8 +151,7 @@
 				909F8C832AF63E5F00171515 /* Login Page */,
 				909F8C862AF63E9000171515 /* Registration Page */,
 				904942BB2AF66DE00062D897 /* Home Page */,
-				904942B32AF659530062D897 /* DataManager */,
-				904942BE2AF673800062D897 /* File Manager */,
+				904942BE2AF673800062D897 /* Data Manager */,
 				903AA9D92AFA12DE00829DC8 /* Parser */,
 				90B564662AFCD6CA0082D9E7 /* JSON */,
 				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
@@ -221,6 +223,10 @@
 			dependencies = (
 			);
 			name = FoodOrderMobileApp;
+			packageProductDependencies = (
+				90B564712AFCF4D40082D9E7 /* Realm */,
+				90B564732AFCF4D40082D9E7 /* RealmSwift */,
+			);
 			productName = FoodOrderMobileApp;
 			productReference = 909F8C6C2AF63E4900171515 /* FoodOrderMobileApp.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +255,9 @@
 				Base,
 			);
 			mainGroup = 909F8C632AF63E4900171515;
+			packageReferences = (
+				90B564702AFCF4D40082D9E7 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 909F8C6D2AF63E4900171515 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,19 +286,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				904942C02AF673970062D897 /* UserLoginFileManager.swift in Sources */,
 				903AA9DF2AFA1A1A00829DC8 /* RestaurantsCell.swift in Sources */,
 				903AA9E42AFA2A7500829DC8 /* RestaurantInfoController.swift in Sources */,
 				90B5646B2AFCD8DA0082D9E7 /* BasketPageController.swift in Sources */,
 				909F8C852AF63E7B00171515 /* LoginPageController.swift in Sources */,
 				90B5646F2AFCD91D0082D9E7 /* BasketListCell.swift in Sources */,
+				90B5647A2AFD069F0082D9E7 /* Purchase.swift in Sources */,
 				903AA9E72AFA59D100829DC8 /* FoodListController.swift in Sources */,
 				903AA9DB2AFA12E700829DC8 /* Parser.swift in Sources */,
+				90B5647E2AFD1BCA0082D9E7 /* Meal.swift in Sources */,
 				904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */,
 				909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */,
 				909F8C882AF63EAA00171515 /* RegistrationPageController.swift in Sources */,
 				905334D32AFA9AF8002B0326 /* FoodListCell.swift in Sources */,
 				904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */,
+				90B564782AFD01850082D9E7 /* Database.swift in Sources */,
 				904942B52AF65A0D0062D897 /* User.swift in Sources */,
 				909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */,
 				903AA9D82AFA11AE00829DC8 /* Restaurant.swift in Sources */,
@@ -513,6 +524,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90B564702AFCF4D40082D9E7 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90B564712AFCF4D40082D9E7 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90B564702AFCF4D40082D9E7 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		90B564732AFCF4D40082D9E7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90B564702AFCF4D40082D9E7 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 909F8C642AF63E4900171515 /* Project object */;
 }

@@ -8,6 +8,9 @@
 import UIKit
 
 class BasketPageController: UIViewController {
+    @IBOutlet weak var foodDeliveryAmountLabel: UILabel!
+    @IBOutlet weak var foodTotalAmount: UILabel!
+    
     var basket = [MealModel]()
 
     @IBOutlet weak var table: UITableView!
@@ -16,6 +19,11 @@ class BasketPageController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+
+    @IBAction func orderNowButton(_ sender: Any) {
+    }
+    
 
 }
 
