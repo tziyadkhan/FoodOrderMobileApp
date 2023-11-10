@@ -72,7 +72,7 @@ extension HomePageController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "FoodListController") as! FoodListController
-        controller.foodlist = self.items[indexPath.item].mealList ?? [MealModel]()
+        controller.foodList = self.items[indexPath.item].mealList ?? [MealModel]()
         navigationController?.show(controller, sender: nil)
     }
 }

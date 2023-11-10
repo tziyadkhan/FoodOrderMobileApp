@@ -7,40 +7,93 @@
 
 import Foundation
 import RealmSwift
+//
 
 class Database {
-//    var realm = try! Realm()
-    
-    static var realm = try! Realm()
-    static var userList: [User] = Database.fetchFromDB(Database: realm)
-    static let currentEmail = UserDefaults.standard.string(forKey: "enteredEmail") ?? ""
+    var realm: Realm {
+        do {
+            return try Realm()
+        } catch {
+            fatalError("Error initializing Realm: \(error)")
+        }
+    }
 
-    
-    // Writes the User object to DB
-    static func saveToDB(user: User, Database: Realm) {
-        try! Database.write {
-            Database.add(user)
-        }
-    }
-    
-    // Fetchs from DB and returns an array of User objects
-    static func fetchFromDB(Database: Realm) -> [User] {
-        var result: [User] = [User]()
-        let objects = Database.objects(User.self)
-        result.append(contentsOf: objects)
-        return result
-    }
-    
-    // Gets specific user object
-    static func getUser() -> User {
-        var result: User = User()
-        
-        for user in userList {
-            if user.email == Database.currentEmail {
-                result = user
+    // MARK: - CRUD Operations
+
+    func saveToDB(user: User) {
+        do {
+            try realm.write {
+                realm.add(user, update: .modified)
             }
+        } catch {
+            print("Error saving to DB: \(error)")
         }
-        
-        return result
+    }
+
+    func fetchFromDB() -> [User] {
+        do {
+            let objects = realm.objects(User.self)
+            return Array(objects)
+        } catch {
+            print("Error fetching from DB: \(error)")
+            return []
+        }
+    }
+
+    func getUser(email: String) -> User? {
+        return realm.objects(User.self).filter("email == %@", email).first
+    }
+
+    // MARK: - Utility Functions
+
+    func getFilePath() {
+        if let url = realm.configuration.fileURL {
+            print("Realm file path: \(url)")
+        }
     }
 }
+
+
+//class Database {
+//   
+//    var realm: Realm {
+//        do {
+//            return try Realm()
+//        } catch {
+//            fatalError("Error initializing Realm: \(error)")
+//        }
+//    }
+//    
+//    func saveToDB(user: User) {
+//        do {
+//            try realm.write {
+//                realm.add(user, update: .modified)
+////                fetchFromDB()
+//            }
+//            realm.refresh()
+//        } catch {
+//            print("Error saving to DB: \(error)")
+//        }
+//    }
+//    
+//    func fetchFromDB() -> [User] {
+//        do {
+//            let objects = realm.objects(User.self)
+//            return Array(objects)
+//        } catch {
+//            print("Error fetching from DB: \(error)")
+//            return []
+//        }
+//    }
+//    
+//    func getUser(email: String) -> User? {
+//        return realm.objects(User.self).filter("email == %@", email).first
+//    }
+//    
+//    func getFilePath() {
+//        if let url = realm.configuration.fileURL {
+//            print(url)
+//        }
+//    }
+//    
+//}

@@ -12,21 +12,21 @@ class LoginPageController: UIViewController {
     @IBOutlet weak var loginButtonView: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    
-    
-    var userLoginList: [User] = Database.fetchFromDB(Database: try! Realm())
+    let helper = Database()
     var realm = try! Realm()
-    //    let helper = UserLoginFileManager()
+    var userLoginList = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
-        print(userLoginList)
-        
+        userLoginList = helper.fetchFromDB()
+//        print(userLoginList)
+    
     }
+   
     
     @IBAction func loginButton(_ sender: Any) {
-        print("aue")
+//        print("test")
         checkLogin()
     }
     
@@ -39,12 +39,15 @@ class LoginPageController: UIViewController {
 
 // MARK: Functions
 extension LoginPageController {
+    
     func registrationPage() {
         print("test")
         let controller = storyboard?.instantiateViewController(withIdentifier: "RegistrationPageController") as! RegistrationPageController
         controller.onLogin = { email, password in
             self.emailTextField.text = email
             self.passwordTextField.text = password
+            
+           
         }
         
         navigationController?.show(controller, sender: nil)
@@ -75,14 +78,14 @@ extension LoginPageController {
     }
     
     func checkLogin() {
-        
+        userLoginList = helper.fetchFromDB()
         if let loginEmail = emailTextField.text,
            let loginPassword = passwordTextField.text,
            !loginEmail.isEmpty,
            !loginPassword.isEmpty {
             if userLoginList.contains(where: {$0.email == loginEmail && $0.password == loginPassword}) {
-                self.setRoot()
                 UserDefaults.standard.set(loginEmail, forKey: "enteredEmail")
+                self.setRoot()
                 let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
                 navigationController?.show(controller, sender: nil)
             } else {
@@ -91,8 +94,5 @@ extension LoginPageController {
         }else {
             showAlert(title: "Xəta", message: "Bosh melumat daxil olunub")
         }
-        
     }
-    
-    
 }

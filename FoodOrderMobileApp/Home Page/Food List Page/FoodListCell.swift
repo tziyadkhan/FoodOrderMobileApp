@@ -26,6 +26,7 @@ class FoodListCell: UICollectionViewCell {
     
     @IBAction func addBasketButton(_ sender: Any) {
         print("addbasket")
+        addToBasketCallBack?()
 
     }
     
@@ -46,7 +47,6 @@ class FoodListCell: UICollectionViewCell {
         } else {
             count -= 1
         }
-        
         foodAmountCallBack?(count)
     }
     
