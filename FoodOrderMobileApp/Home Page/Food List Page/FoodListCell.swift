@@ -8,7 +8,7 @@
 import UIKit
 
 class FoodListCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodPriceLabel: UILabel!
@@ -27,7 +27,7 @@ class FoodListCell: UICollectionViewCell {
     @IBAction func addBasketButton(_ sender: Any) {
         print("addbasket")
         addToBasketCallBack?()
-
+        
     }
     
     @IBAction func addAmount(_ sender: Any) {

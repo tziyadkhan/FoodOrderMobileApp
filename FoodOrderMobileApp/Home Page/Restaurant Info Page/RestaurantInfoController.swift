@@ -21,7 +21,7 @@ class RestaurantInfoController: UIViewController {
     @IBOutlet weak var restaurantInfo: UITextView!
     
     var restaurant: RestaurantModel?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fillData()
@@ -41,7 +41,7 @@ class RestaurantInfoController: UIViewController {
         restaurantInfo.layer.cornerRadius = 20
         aboutLabel.text = "About \(restaurant?.restaurantName ?? "")"        
     }
-
+    
 }
 
 

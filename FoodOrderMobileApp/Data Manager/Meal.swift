@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class MealModel: Object, Codable{
+class MealModel: Object, Codable {
     @Persisted var mealName: String?
     @Persisted var mealImage: String? // Assuming you want to store the image as Data
     @Persisted var mealPrice: Double?

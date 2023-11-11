@@ -31,7 +31,7 @@ class RegistrationPageController: UIViewController {
     
     @IBAction func registerButton(_ sender: Any) {
         regUser()
-
+        
     }
 }
 
@@ -44,7 +44,7 @@ extension RegistrationPageController {
         user.password = passwordTextField.text ?? ""
         user.phoneNumber = phonenumberTextField.text ?? ""
         user.purchase = Purchase()
-
+        
         onLogin?(emailTextField.text, passwordTextField.text)
         helper.saveToDB(user: user)
         

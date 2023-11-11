@@ -109,10 +109,10 @@
 		904942BB2AF66DE00062D897 /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
-				90B564692AFCD8C00082D9E7 /* Basket Page */,
 				90B564682AFCD88B0082D9E7 /* Restaurants */,
 				903AA9E02AFA293400829DC8 /* Restaurant Info Page */,
 				903AA9E52AFA59AA00829DC8 /* Food List Page */,
+				90B564692AFCD8C00082D9E7 /* Basket Page */,
 			);
 			path = "Home Page";
 			sourceTree = "<group>";

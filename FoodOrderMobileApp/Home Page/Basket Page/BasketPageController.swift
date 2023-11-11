@@ -8,39 +8,57 @@
 import UIKit
 
 class BasketPageController: UIViewController {
+    
     @IBOutlet weak var foodDeliveryAmountLabel: UILabel!
     @IBOutlet weak var foodTotalAmount: UILabel!
     @IBOutlet weak var table: UITableView!
     
+    let emailSaved = UserDefaults.standard.string(forKey: "enteredEmail")
     let helper = Database()
-    var user = User()
+    var user = [User]()
+    
+    var tempUser = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = helper.fetchFromDB().first ?? User()
-
+        
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        user = helper.fetchFromDB()
+        
+        if let index = user.firstIndex(where: {$0.email == emailSaved}) {
+            let userBasket = user[index]
+            tempUser = userBasket
+//            print("testtt")
+        }
+        
         table.reloadData()
         orderConfig()
+        print(tempUser)
+        print(tempUser.email ?? "bosh")
+
     }
     
-
+    
     @IBAction func orderNowButton(_ sender: Any) {
     }
     
-
+    
 }
 
 extension BasketPageController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        user.purchase?.mealList.count ?? 0
+        tempUser.purchase?.mealList.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasketListCell", for: indexPath) as! BasketListCell
-        let userMeal = user.purchase?.mealList
+        let userMeal = tempUser.purchase?.mealList
+        
         cell.fillCell(name: userMeal?[indexPath.row].mealName,
                       image: userMeal?[indexPath.row].mealImage ?? "",
                       amount: String(userMeal?[indexPath.row].mealAmount ?? 0),
@@ -53,7 +71,7 @@ extension BasketPageController {
     func orderConfig() {
         var finalPrice: Double = 0
         
-        if let mealList = user.purchase?.mealList {
+        if let mealList = tempUser.purchase?.mealList {
             for meal in mealList {
                 finalPrice = finalPrice + (Double(meal.mealAmount ?? 0) * (meal.mealPrice ?? 0) )
             }

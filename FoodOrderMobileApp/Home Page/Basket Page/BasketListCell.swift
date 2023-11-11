@@ -13,17 +13,17 @@ class BasketListCell: UITableViewCell {
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodAmountLabel: UILabel!
     @IBOutlet weak var foodPriceLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         foodAmountLabel.layer.cornerRadius = 12
         foodAmountLabel.layer.masksToBounds = true
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -33,5 +33,5 @@ class BasketListCell: UITableViewCell {
         foodAmountLabel.text = amount
         foodPriceLabel.text = price
     }
-
+    
 }

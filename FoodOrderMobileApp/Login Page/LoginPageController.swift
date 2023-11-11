@@ -19,13 +19,13 @@ class LoginPageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
-//        userLoginList = helper.fetchFromDB()
-//        print(userLoginList)
-    
+        //        userLoginList = helper.fetchFromDB()
+        //        print(userLoginList)
+        
     }
     
     @IBAction func loginButton(_ sender: Any) {
-//        print("test")
+        //        print("test")
         checkLogin()
     }
     
@@ -39,7 +39,7 @@ class LoginPageController: UIViewController {
 extension LoginPageController {
     
     func registrationPage() {
-//        print("test")
+        //        print("test")
         let controller = storyboard?.instantiateViewController(withIdentifier: "RegistrationPageController") as! RegistrationPageController
         controller.onLogin = { email, password in
             self.emailTextField.text = email

@@ -16,7 +16,7 @@ class FoodListController: UIViewController {
     
     var realm = try! Realm()
     var foodList = [MealModel]()
-    var foodListTemp = [MealModel]()
+//    var foodListTemp = [MealModel]()
     var backupFoodList = [MealModel]()
     var searching = false
     var user = [User]()
@@ -80,7 +80,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-     func updateAmount(indexPath: IndexPath, newAmount: Int) {
+    func updateAmount(indexPath: IndexPath, newAmount: Int) {
         // Update the amount in your data source (foodList) accordingly
         self.foodList[indexPath.item].mealAmount = newAmount
         
@@ -89,7 +89,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
-     func addToBasket(indexPath: IndexPath) {
+    func addToBasket(indexPath: IndexPath) {
         // Get the currently logged-in user
         guard let currentUser = helper.fetchFromDB().first else {
             print("No user found.")
