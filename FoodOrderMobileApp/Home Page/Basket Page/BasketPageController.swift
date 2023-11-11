@@ -17,6 +17,8 @@ class BasketPageController: UIViewController {
     let helper = Database()
     var user = [User]()
     
+    var tempFinalMealPrice = 0.0
+    
     var tempUser = User()
     
     override func viewDidLoad() {
@@ -38,13 +40,17 @@ class BasketPageController: UIViewController {
         
         table.reloadData()
         orderConfig()
-        print(tempUser)
-        print(tempUser.email ?? "bosh")
+//        print(tempUser)
+//        print(tempUser.email ?? "bosh")
+//        print("Basketdeki tempfinal \(tempFinal)")
 
     }
     
     
     @IBAction func orderNowButton(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "PaymentPageController") as! PaymentPageController
+        controller.userMealPrice = tempFinalMealPrice
+        navigationController?.show(controller, sender: nil)
     }
     
     
@@ -74,6 +80,7 @@ extension BasketPageController {
         if let mealList = tempUser.purchase?.mealList {
             for meal in mealList {
                 finalPrice = finalPrice + (Double(meal.mealAmount ?? 0) * (meal.mealPrice ?? 0) )
+                tempFinalMealPrice = finalPrice
             }
         }
         

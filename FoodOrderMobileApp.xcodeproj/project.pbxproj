@@ -17,6 +17,7 @@
 		904942BA2AF66D8E0062D897 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942B92AF66D8E0062D897 /* TabBarController.swift */; };
 		904942BD2AF66DF80062D897 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904942BC2AF66DF80062D897 /* HomePageController.swift */; };
 		905334D32AFA9AF8002B0326 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905334D22AFA9AF8002B0326 /* FoodListCell.swift */; };
+		9075DC092AFFEFCB006404DE /* PaymentPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075DC082AFFEFCB006404DE /* PaymentPageController.swift */; };
 		909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C6F2AF63E4900171515 /* AppDelegate.swift */; };
 		909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C712AF63E4900171515 /* SceneDelegate.swift */; };
 		909F8C772AF63E4900171515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909F8C752AF63E4900171515 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		904942B92AF66D8E0062D897 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		904942BC2AF66DF80062D897 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		905334D22AFA9AF8002B0326 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
+		9075DC082AFFEFCB006404DE /* PaymentPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPageController.swift; sourceTree = "<group>"; };
 		909F8C6C2AF63E4900171515 /* FoodOrderMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909F8C6F2AF63E4900171515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909F8C712AF63E4900171515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,10 +131,23 @@
 			path = "Data Manager";
 			sourceTree = "<group>";
 		};
+		9075DC052AFFEF3D006404DE /* Payment Page */ = {
+			isa = PBXGroup;
+			children = (
+				9075DC082AFFEFCB006404DE /* PaymentPageController.swift */,
+			);
+			path = "Payment Page";
+			sourceTree = "<group>";
+		};
 		909F8C632AF63E4900171515 = {
 			isa = PBXGroup;
 			children = (
 				909F8C6E2AF63E4900171515 /* FoodOrderMobileApp */,
+				909F8C752AF63E4900171515 /* Main.storyboard */,
+				909F8C782AF63E4A00171515 /* Assets.xcassets */,
+				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
+				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
+				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
 				909F8C6D2AF63E4900171515 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,14 +166,10 @@
 				909F8C832AF63E5F00171515 /* Login Page */,
 				909F8C862AF63E9000171515 /* Registration Page */,
 				904942BB2AF66DE00062D897 /* Home Page */,
+				9075DC052AFFEF3D006404DE /* Payment Page */,
 				904942BE2AF673800062D897 /* Data Manager */,
-				903AA9D92AFA12DE00829DC8 /* Parser */,
 				90B564662AFCD6CA0082D9E7 /* JSON */,
-				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
-				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
-				909F8C752AF63E4900171515 /* Main.storyboard */,
-				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
-				909F8C782AF63E4A00171515 /* Assets.xcassets */,
+				903AA9D92AFA12DE00829DC8 /* Parser */,
 				909F8C7D2AF63E4A00171515 /* Info.plist */,
 				904942B82AF66D720062D897 /* Tab Bar Controller */,
 			);
@@ -288,6 +299,7 @@
 			files = (
 				903AA9DF2AFA1A1A00829DC8 /* RestaurantsCell.swift in Sources */,
 				903AA9E42AFA2A7500829DC8 /* RestaurantInfoController.swift in Sources */,
+				9075DC092AFFEFCB006404DE /* PaymentPageController.swift in Sources */,
 				90B5646B2AFCD8DA0082D9E7 /* BasketPageController.swift in Sources */,
 				909F8C852AF63E7B00171515 /* LoginPageController.swift in Sources */,
 				90B5646F2AFCD91D0082D9E7 /* BasketListCell.swift in Sources */,
