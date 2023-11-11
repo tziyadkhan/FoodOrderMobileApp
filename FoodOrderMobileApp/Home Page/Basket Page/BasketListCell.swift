@@ -17,6 +17,8 @@ class BasketListCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        foodAmountLabel.layer.cornerRadius = 12
+        foodAmountLabel.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -16,17 +16,3 @@ class Purchase: Object {
     @Persisted var mealList = List<MealModel>()
 }
 
-
-//class Purchase: Object {
-//    @Persisted var totalPrice: Int?
-//    @Persisted var foodList: List<MealModel>
-//
-//    override init() {
-//        super.init()
-//    }
-//
-//    init(totalPrice: Int?, foodList: List<MealModel>) {
-//        self.totalPrice = totalPrice
-//        self.foodList = foodList
-//    }
-//}

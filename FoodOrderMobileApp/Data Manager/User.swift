@@ -18,27 +18,3 @@ class User: Object {
     // Relationship with Purchase
     @Persisted var purchase: Purchase?
 }
-
-//class User: Object {
-//    @Persisted var fullname: String?
-//    @Persisted var email: String?
-//    @Persisted var phonenumber: String?
-//    @Persisted var password: String?
-//    @Persisted var purchaseList: Purchase?
-//    
-//    override init() {
-//        super.init()
-//    }
-//    
-//    init(fullname: String?, email: String?, phonenumber: String?, password: String?, purchaseList: Purchase) {
-//        self.fullname = fullname
-//        self.email = email
-//        self.phonenumber = phonenumber
-//        self.password = password
-//        self.purchaseList = purchaseList
-//    }
-//    
-//    override class func primaryKey() -> String? {
-//        return "email"
-//    }
-//}
