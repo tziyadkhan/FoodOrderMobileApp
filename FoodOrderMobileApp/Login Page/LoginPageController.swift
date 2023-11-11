@@ -19,11 +19,10 @@ class LoginPageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
-        userLoginList = helper.fetchFromDB()
+//        userLoginList = helper.fetchFromDB()
 //        print(userLoginList)
     
     }
-   
     
     @IBAction func loginButton(_ sender: Any) {
 //        print("test")
@@ -36,20 +35,16 @@ class LoginPageController: UIViewController {
     }
 }
 
-
 // MARK: Functions
 extension LoginPageController {
     
     func registrationPage() {
-        print("test")
+//        print("test")
         let controller = storyboard?.instantiateViewController(withIdentifier: "RegistrationPageController") as! RegistrationPageController
         controller.onLogin = { email, password in
             self.emailTextField.text = email
             self.passwordTextField.text = password
-            
-           
         }
-        
         navigationController?.show(controller, sender: nil)
     }
     
@@ -91,7 +86,7 @@ extension LoginPageController {
             } else {
                 showAlert(title: "Xəta", message: "Email və ya şifrə düzgün qeyd edilməyib")
             }
-        }else {
+        } else {
             showAlert(title: "Xəta", message: "Bosh melumat daxil olunub")
         }
     }

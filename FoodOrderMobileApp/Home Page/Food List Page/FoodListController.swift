@@ -51,60 +51,81 @@ class FoodListController: UIViewController {
 }
 
 extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         foodList.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodListCell", for: indexPath) as! FoodListCell
         cell.fillCell(name: foodList[indexPath.item].mealName,
                       image: foodList[indexPath.item].mealImage,
                       price: String("$ \(foodList[indexPath.item].mealPrice ?? 0)"),
                       amount: String(foodList[indexPath.item].mealAmount ?? 0))
-        var tempAmount: Int?
         
-        cell.foodAmountCallBack = {(amount) -> Void in
-            cell.foodAmountLabel.text = String(amount)
-            tempAmount = amount
+        // Update amount when the plus button is tapped
+        cell.foodAmountCallBack = { [weak self] amount in
+            self?.updateAmount(indexPath: indexPath, newAmount: amount)
+            cell.fillCell(name: self?.foodList[indexPath.item].mealName,
+                          image: self?.foodList[indexPath.item].mealImage,
+                          price: String("$ \(self?.foodList[indexPath.item].mealPrice ?? 0)"),
+                          amount: String(self?.foodList[indexPath.item].mealAmount ?? 0))
         }
         
-        cell.addToBasketCallBack = {
-
+        // Add to Basket
+        cell.addToBasketCallBack = { [weak self] in
+            self?.addToBasket(indexPath: indexPath)
         }
+        
         return cell
     }
+    
+     func updateAmount(indexPath: IndexPath, newAmount: Int) {
+        // Update the amount in your data source (foodList) accordingly
+        self.foodList[indexPath.item].mealAmount = newAmount
+        
+        if let cell = collection.cellForItem(at: indexPath) as? FoodListCell {
+            cell.foodAmountLabel.text = String(newAmount)
+        }
+    }
+    
+     func addToBasket(indexPath: IndexPath) {
+        // Get the currently logged-in user
+        guard let currentUser = helper.fetchFromDB().first else {
+            print("No user found.")
+            return
+        }
+        
+        let selectedMeal = self.foodList[indexPath.item]
+        
+        if let existingMeal = currentUser.purchase?.mealList.first(where: { $0.mealName == selectedMeal.mealName }) {
+            // If the meal is already in the basket, update the count
+            do {
+                try self.realm.write {
+                    existingMeal.mealAmount = selectedMeal.mealAmount
+                }
+                print("Meal count updated in the basket.")
+            } catch {
+                print("Error updating meal count: \(error)")
+            }
+        } else {
+            // If the meal is not in the basket, add it with the current amount
+            let newMeal = MealModel()
+            newMeal.mealName = selectedMeal.mealName
+            newMeal.mealImage = selectedMeal.mealImage
+            newMeal.mealPrice = selectedMeal.mealPrice
+            newMeal.mealContent = selectedMeal.mealContent
+            newMeal.mealAmount = selectedMeal.mealAmount
+            newMeal.mealDeliveryTime = selectedMeal.mealDeliveryTime
+            
+            do {
+                try self.realm.write {
+                    currentUser.purchase?.mealList.append(newMeal)
+                }
+                print("Meal added to basket.")
+            } catch {
+                print("Error adding meal to basket: \(error)")
+            }
+        }
+    }
 }
-
-
-//            do {
-//                    try self.realm.write {
-//                        if let currentUser = self.user.first {
-//                            currentUser.purchaseList?.foodList.append(objectsIn: tempPurchase.foodList)
-//                            self.helper.saveToDB(user: currentUser)
-//                        }
-//                    }
-//                } catch {
-//                    print(error.localizedDescription)
-//                }
-
-
-
-//guard indexPath.item < self.foodList.count else {
-//    print("Index out of range")
-//    return
-//}
-//
-//self.foodList[indexPath.item].mealAmount = tempAmount
-//let tempPurchase = Purchase()
-//
-//tempPurchase.foodList.append(objectsIn: self.foodList.filter ({$0.mealAmount ?? 0 > 0}))
-//
-////            if let currentUser = self.user.first {
-////                    self.helper.updatePurchaseList(for: currentUser, with: tempPurchase)
-////                }
-//
-////            print(self.user)
-//print(tempPurchase)
-//self.helper.getFilePath()
-//
-//
-

@@ -83,6 +83,7 @@ extension HomePageController {
         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let sceneDelegate = scene.delegate as? SceneDelegate {
             UserDefaults.standard.setValue(false, forKey: "loggedIN") // Setting the flag
+//            UserDefaults.standard.removeObject(forKey: "enteredEmail")  // tezeTema
             sceneDelegate.loginPage(windowScene: scene)
         }
     }

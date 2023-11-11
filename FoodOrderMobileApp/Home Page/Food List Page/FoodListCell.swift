@@ -42,9 +42,7 @@ class FoodListCell: UICollectionViewCell {
         print("minus")
         let amount = self.foodAmountLabel.text ?? "0"
         var count: Int = Int(amount) ?? 0
-        if count == 0 {
-            
-        } else {
+        if count > 0 {
             count -= 1
         }
         foodAmountCallBack?(count)
