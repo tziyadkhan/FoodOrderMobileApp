@@ -13,7 +13,7 @@
     {
         "mealName": "Bigfoot Burger",
         "mealImage": "bigfootBurger",
-        "mealPrice": 10.45,
+        "mealPrice": 10.0,
         "mealContent": "Kotlet, corek, holland pendiri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -21,7 +21,7 @@
     {
         "mealName": "Cheese Burger",
         "mealImage": "cheeseBurger",
-        "mealPrice": 12.55,
+        "mealPrice": 12.0,
         "mealContent": "Kotlet, corek, coxlu holland pendiri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -29,7 +29,7 @@
     {
         "mealName": "Meteor Burger",
         "mealImage": "meteorBurger",
-        "mealPrice": 13.65,
+        "mealPrice": 13.0,
         "mealContent": "Kotlet, corek, holland pendiri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -37,7 +37,7 @@
     {
         "mealName": "Beefcake Burger",
         "mealImage": "beefcakeBurger",
-        "mealPrice": 14.45,
+        "mealPrice": 14.0,
         "mealContent": "Mal etinden kotlet, corek, holland pendiri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -45,7 +45,7 @@
     {
         "mealName": "BBQ Burger",
         "mealImage": "bbqBurger",
-        "mealPrice": 14.34,
+        "mealPrice": 14.0,
         "mealContent": "Kotlet, corek, holland pendiri, barbekyu sousu",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -53,7 +53,7 @@
     {
         "mealName": "Chicken Burger",
         "mealImage": "chickenBurger",
-        "mealPrice": 8.75,
+        "mealPrice": 8.0,
         "mealContent": "Toyuq etinden Kotlet, corek, holland pendiri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -74,7 +74,7 @@
     {
         "mealName": "Tiramisu",
         "mealImage": "tiramisu",
-        "mealPrice": 20.55,
+        "mealPrice": 20.0,
         "mealContent": "Egg, sugar, coffee, milk, biscuits",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -82,7 +82,7 @@
     {
         "mealName": "Cinnabon",
         "mealImage": "cinnabon",
-        "mealPrice": 24.33,
+        "mealPrice": 24.0,
         "mealContent": "Cinnamon, egg, flour, milk, curd",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -90,7 +90,7 @@
     {
         "mealName": "Eclair",
         "mealImage": "eclair",
-        "mealPrice": 22.54,
+        "mealPrice": 22.0,
         "mealContent": "Egg, sugar, milk, flour",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -98,7 +98,7 @@
     {
         "mealName": "Waffle",
         "mealImage": "waffle",
-        "mealPrice": 10.54,
+        "mealPrice": 10.0,
         "mealContent": "Egg, sugar, milk, flour",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -119,7 +119,7 @@
     {
         "mealName": "Sushi",
         "mealImage": "sushi",
-        "mealPrice": 20.23,
+        "mealPrice": 20.0,
         "mealContent": "raw fish, rice",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -127,7 +127,7 @@
     {
         "mealName": "Ebi Yaki",
         "mealImage": "ebiyaki",
-        "mealPrice": 24.54,
+        "mealPrice": 24.0,
         "mealContent": "rice, shrimps",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -135,7 +135,7 @@
     {
         "mealName": "Biryani",
         "mealImage": "biryani",
-        "mealPrice": 22.85,
+        "mealPrice": 22.0,
         "mealContent": "par-cooked rice, milk and ghee",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -143,7 +143,7 @@
     {
         "mealName": "Ramen",
         "mealImage": "ramen",
-        "mealPrice": 10.65,
+        "mealPrice": 10.0,
         "mealContent": "nori, a marinated egg, scallions",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -164,7 +164,7 @@
     {
         "mealName": "Risotto",
         "mealImage": "risotto",
-        "mealPrice": 20.45,
+        "mealPrice": 20.0,
         "mealContent": "Pumpkin, red radicchio, mushrooms, sausage or shellfish.",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -172,7 +172,7 @@
     {
         "mealName": "Pasta",
         "mealImage": "pasta",
-        "mealPrice": 24.85,
+        "mealPrice": 24.0,
         "mealContent": "Spaghetti, bacon, egg yolk, and cheese",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -180,7 +180,7 @@
     {
         "mealName": "Gnocchi",
         "mealImage": "gnocchi",
-        "mealPrice": 22.45,
+        "mealPrice": 22.0,
         "mealContent": "cheese, spinach, eggs, and a variety of sauces",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -188,7 +188,7 @@
     {
         "mealName": "Pesto",
         "mealImage": "pesto",
-        "mealPrice": 10.25,
+        "mealPrice": 10.0,
         "mealContent": "Parmesan cheese, Pecorino cheese, pine nuts, garlic, and salt",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -209,7 +209,7 @@
     {
         "mealName": "Ghanaian Salad",
         "mealImage": "ghanaian",
-        "mealPrice": 20.35,
+        "mealPrice": 20.0,
         "mealContent": "Lettuce, tomatoes, carrots, cucumber, onions and baked beans.",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -217,7 +217,7 @@
     {
         "mealName": "Fajita Steak Salad",
         "mealImage": "fajita",
-        "mealPrice": 24.45,
+        "mealPrice": 24.0,
         "mealContent": "Jack cheese, some fresh avocado",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -225,7 +225,7 @@
     {
         "mealName": "Spinach Salad",
         "mealImage": "spinach",
-        "mealPrice": 22.65,
+        "mealPrice": 22.0,
         "mealContent": "Peppered bacon bits, hard-boiled eggs and caramelized mushrooms.",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -233,7 +233,7 @@
     {
         "mealName": "Cobb-Wedge",
         "mealImage": "cobbWedge",
-        "mealPrice": 10.65,
+        "mealPrice": 10.0,
         "mealContent": "Cubed ham, hard-boiled eggs, diced avocados and edamame.",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -254,7 +254,7 @@
     {
         "mealName": "Bavarian Doner",
         "mealImage": "bavarian",
-        "mealPrice": 20.75,
+        "mealPrice": 20.0,
         "mealContent": "Meat,oninion,cheese,fri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -262,7 +262,7 @@
     {
         "mealName": "Falafel",
         "mealImage": "falafel",
-        "mealPrice": 24.85,
+        "mealPrice": 24.0,
         "mealContent": "Meat,oninion,cheese,fri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -270,7 +270,7 @@
     {
         "mealName": "Sandwich",
         "mealImage": "sandwich",
-        "mealPrice": 15.35,
+        "mealPrice": 15.0,
         "mealContent": "Meat,oninion,cheese,fri in bread",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
@@ -278,7 +278,7 @@
     {
         "mealName": "Lavash",
         "mealImage": "lavash",
-        "mealPrice": 10.55,
+        "mealPrice": 10.0,
         "mealContent": "Meat, onion, tomato, lavash",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"

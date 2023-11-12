@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PaymentPageController: UIViewController {
     
@@ -18,12 +19,22 @@ class PaymentPageController: UIViewController {
     
     var userBalance = 500
     var userMealPrice = 0
+    let helper = Database()
+    let emailSaved = UserDefaults.standard.string(forKey: "enteredEmail")
+    var user = [User]()
+    var tempUser = User()
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         shapeConfig()
     }
     override func viewWillAppear(_ animated: Bool) {
+        user = helper.fetchFromDB()
+        if let index = user.firstIndex(where: {$0.email == emailSaved}) {
+            let userCalled = user[index]
+            tempUser = userCalled
+        }
     }
     
     
@@ -52,6 +63,9 @@ extension PaymentPageController {
                         Payment date: \(dateTimeString)
                         Balance: \(balance) AZN.
                         """)
+            try! self.realm.write{
+                self.tempUser.purchase?.purchaseStatus = "complete"
+            }
             
         } else {
             failure(title: "Failure",
@@ -74,9 +88,8 @@ extension PaymentPageController {
     func successAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let homeButton = UIAlertAction(title: "Return Home", style: .default) { (_) in
-            let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomePageController") as! HomePageController
-            self.navigationController?.show(controller, sender: nil)
+        let homeButton = UIAlertAction(title: "Okay", style: .default) { (_) in
+            self.navigationController?.popViewController(animated: true)
         }
         alertController.addAction(homeButton)
         self.present(alertController, animated: true)
@@ -89,3 +102,4 @@ extension PaymentPageController {
         self.present(alertController, animated: true)
     }
 }
+

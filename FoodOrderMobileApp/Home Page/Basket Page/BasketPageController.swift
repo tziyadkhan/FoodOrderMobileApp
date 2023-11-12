@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class BasketPageController: UIViewController {
     
@@ -15,12 +16,14 @@ class BasketPageController: UIViewController {
     
     let emailSaved = UserDefaults.standard.string(forKey: "enteredEmail")
     let helper = Database()
+    var realm = try! Realm()
     var user = [User]()
     var tempFinalMealPrice = 0.0
     var tempUser = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.reloadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,14 +32,14 @@ class BasketPageController: UIViewController {
             let userBasket = user[index]
             tempUser = userBasket
         }
-        
         table.reloadData()
         orderConfig()
-//        print(tempUser)
-        print("basketdeki \(tempUser.email ?? "bosh")")
-//        print("Basketdeki tempfinal \(tempFinal)")
-
     }
+    override func viewWillLayoutSubviews() {
+        self.table.reloadData()
+    }
+    
+
     @IBAction func orderNowButton(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "PaymentPageController") as! PaymentPageController
         controller.userMealPrice = Int(tempFinalMealPrice)
@@ -52,17 +55,44 @@ extension BasketPageController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasketListCell", for: indexPath) as! BasketListCell
-        let userMeal = tempUser.purchase?.mealList
+//        let userMeal = tempUser.purchase?.mealList
         
-        cell.fillCell(name: userMeal?[indexPath.row].mealName,
-                      image: userMeal?[indexPath.row].mealImage ?? "",
-                      amount: String(userMeal?[indexPath.row].mealAmount ?? 0),
-                      price: "\(String(userMeal?[indexPath.row].mealPrice ?? 0)) ₼")
+        if tempUser.purchase?.purchaseStatus == "incomplete" {
+            cell.fillCell(name: tempUser.purchase?.mealList[indexPath.row].mealName,
+                          image: tempUser.purchase?.mealList[indexPath.row].mealImage ?? "",
+                          amount: String(tempUser.purchase?.mealList[indexPath.row].mealAmount ?? 3),
+                          price: "\(String(tempUser.purchase?.mealList[indexPath.row].mealPrice ?? 0)) ₼")
+        } else if tempUser.purchase?.purchaseStatus == "complete" {
+            try! self.realm.write{
+                tempUser.purchase?.mealList.removeAll()
+            }
+        }
+
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .normal, title: "Delete") { _, _, _ in
+            self.deleteItem(indexPathRow: indexPath.row)
+            self.table.reloadData()
+        
+        }
+        delete.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [delete])
     }
 }
 
 extension BasketPageController {
+    // Swipe edilan zaman silecek
+    func deleteItem(indexPathRow: Int) {
+        // Updates the User Purchase info
+        try! self.realm.write {
+            self.tempUser.purchase?.mealList[indexPathRow].mealAmount = 0
+            self.tempUser.purchase?.mealList.remove(at: indexPathRow)
+        }
+
+    }
+        
     func orderConfig() {
         var finalPrice: Double = 0
         
@@ -70,7 +100,6 @@ extension BasketPageController {
             for meal in mealList {
                 finalPrice = finalPrice + (Double(meal.mealAmount ?? 0) * (meal.mealPrice ?? 0) )
                 tempFinalMealPrice = finalPrice
-//                tempUser.purchase?.totalMealPrice = finalPrice
             }
         }
         
@@ -82,4 +111,5 @@ extension BasketPageController {
             foodDeliveryAmountLabel.text = ""
         }
     }
+
 }

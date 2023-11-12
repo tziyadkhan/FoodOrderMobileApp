@@ -101,6 +101,7 @@ extension FoodListController {
             do {
                 try self.realm.write {
                     existingMeal.mealAmount = selectedMeal.mealAmount
+                    tempUser.purchase?.purchaseStatus = "incomplete"
                 }
                 informAlert(title: "Success", message: "Meal added to basket") //ekranda bu gorsenir
             } catch {
@@ -119,6 +120,7 @@ extension FoodListController {
             do {
                 try self.realm.write {
                     tempUser.purchase?.mealList.append(newMeal)
+                    tempUser.purchase?.purchaseStatus = "incomplete"
                 }
                 informAlert(title: "Success", message: "Meal added to basket")
             } catch {
