@@ -89,7 +89,8 @@ extension PaymentPageController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let homeButton = UIAlertAction(title: "Okay", style: .default) { (_) in
-            self.navigationController?.popViewController(animated: true)
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "DeliveryPageController") as! DeliveryPageController
+            self.navigationController?.show(controller, sender: nil)
         }
         alertController.addAction(homeButton)
         self.present(alertController, animated: true)
