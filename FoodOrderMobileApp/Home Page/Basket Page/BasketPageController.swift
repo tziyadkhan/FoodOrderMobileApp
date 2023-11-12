@@ -49,7 +49,7 @@ class BasketPageController: UIViewController {
     
     @IBAction func orderNowButton(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "PaymentPageController") as! PaymentPageController
-        controller.userMealPrice = tempFinalMealPrice
+        controller.userMealPrice = Int(tempFinalMealPrice)
         navigationController?.show(controller, sender: nil)
     }
     

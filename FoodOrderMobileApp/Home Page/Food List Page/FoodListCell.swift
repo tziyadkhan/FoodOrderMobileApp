@@ -26,8 +26,7 @@ class FoodListCell: UICollectionViewCell {
     
     @IBAction func addBasketButton(_ sender: Any) {
         print("addbasket")
-        addToBasketCallBack?()
-        
+        addToBasketCallBack?()        
     }
     
     @IBAction func addAmount(_ sender: Any) {
@@ -55,5 +54,5 @@ class FoodListCell: UICollectionViewCell {
         foodPriceLabel.text = price
         foodAmountLabel.text = amount
     }
-    
+
 }

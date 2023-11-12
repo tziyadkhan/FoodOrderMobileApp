@@ -104,7 +104,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
                 try self.realm.write {
                     existingMeal.mealAmount = selectedMeal.mealAmount
                 }
-                print("Meal count updated in the basket.")
+                informAlert(title: "Success", message: "Meal added to basket")
             } catch {
                 print("Error updating meal count: \(error)")
             }
@@ -122,10 +122,17 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
                 try self.realm.write {
                     currentUser.purchase?.mealList.append(newMeal)
                 }
-                print("Meal added to basket.")
+                informAlert(title: "Success", message: "Meal added to basket")
             } catch {
                 print("Error adding meal to basket: \(error)")
             }
         }
+    }
+    
+    func informAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okayButton = UIAlertAction(title: "Okay", style: .default)
+        alertController.addAction(okayButton)
+        self.present(alertController, animated: true)
     }
 }

@@ -16,8 +16,8 @@ class PaymentPageController: UIViewController {
     @IBOutlet weak var cardExpireTextField: UITextField!
     @IBOutlet weak var cardNumberTextField: UITextField!
     
-    var userBalance = 500.0
-    var userMealPrice = 0.0
+    var userBalance = 500
+    var userMealPrice = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

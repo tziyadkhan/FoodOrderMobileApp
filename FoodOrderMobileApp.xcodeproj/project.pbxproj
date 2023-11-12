@@ -143,11 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				909F8C6E2AF63E4900171515 /* FoodOrderMobileApp */,
-				909F8C752AF63E4900171515 /* Main.storyboard */,
-				909F8C782AF63E4A00171515 /* Assets.xcassets */,
-				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
-				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
-				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
 				909F8C6D2AF63E4900171515 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,6 +166,11 @@
 				90B564662AFCD6CA0082D9E7 /* JSON */,
 				903AA9D92AFA12DE00829DC8 /* Parser */,
 				909F8C7D2AF63E4A00171515 /* Info.plist */,
+				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
+				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
+				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
+				909F8C752AF63E4900171515 /* Main.storyboard */,
+				909F8C782AF63E4A00171515 /* Assets.xcassets */,
 				904942B82AF66D720062D897 /* Tab Bar Controller */,
 			);
 			path = FoodOrderMobileApp;
