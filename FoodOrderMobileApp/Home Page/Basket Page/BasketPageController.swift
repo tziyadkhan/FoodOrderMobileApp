@@ -41,7 +41,7 @@ class BasketPageController: UIViewController {
         table.reloadData()
         orderConfig()
 //        print(tempUser)
-//        print(tempUser.email ?? "bosh")
+        print("basketdeki \(tempUser.email ?? "bosh")")
 //        print("Basketdeki tempfinal \(tempFinal)")
 
     }
