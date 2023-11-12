@@ -12,13 +12,10 @@ class HomePageController: UIViewController {
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBackground: UIView!
     
-    //    let helper = UserLoginFileManager()
     var items = [RestaurantModel]()
     let parser = Parser()
     var searching = false
     var backupItems = [RestaurantModel]()
-//    let emailSaved = UserDefaults.standard.string(forKey: "enteredEmail")
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +23,7 @@ class HomePageController: UIViewController {
         parser.parseJsonFile { parsedItems in
             self.items = parsedItems
         }
-        backupItems = items
-        //        print(items)
+        backupItems = items //search box ucun
     }
     
     @IBAction func searchTextField(_ sender: UITextField) {
@@ -85,7 +81,6 @@ extension HomePageController {
         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let sceneDelegate = scene.delegate as? SceneDelegate {
             UserDefaults.standard.setValue(false, forKey: "loggedIN") // Setting the flag
-            //            UserDefaults.standard.removeObject(forKey: "enteredEmail")  // tezeTema
             sceneDelegate.loginPage(windowScene: scene)
         }
     }

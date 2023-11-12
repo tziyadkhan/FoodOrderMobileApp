@@ -16,26 +16,18 @@ class BasketPageController: UIViewController {
     let emailSaved = UserDefaults.standard.string(forKey: "enteredEmail")
     let helper = Database()
     var user = [User]()
-    
     var tempFinalMealPrice = 0.0
-    
     var tempUser = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        
         user = helper.fetchFromDB()
-        
         if let index = user.firstIndex(where: {$0.email == emailSaved}) {
             let userBasket = user[index]
             tempUser = userBasket
-//            print("testtt")
         }
         
         table.reloadData()
@@ -45,18 +37,15 @@ class BasketPageController: UIViewController {
 //        print("Basketdeki tempfinal \(tempFinal)")
 
     }
-    
-    
     @IBAction func orderNowButton(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "PaymentPageController") as! PaymentPageController
         controller.userMealPrice = Int(tempFinalMealPrice)
         navigationController?.show(controller, sender: nil)
     }
-    
-    
 }
 
 extension BasketPageController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tempUser.purchase?.mealList.count ?? 0
     }
@@ -81,6 +70,7 @@ extension BasketPageController {
             for meal in mealList {
                 finalPrice = finalPrice + (Double(meal.mealAmount ?? 0) * (meal.mealPrice ?? 0) )
                 tempFinalMealPrice = finalPrice
+//                tempUser.purchase?.totalMealPrice = finalPrice
             }
         }
         

@@ -19,24 +19,22 @@ class RegistrationPageController: UIViewController {
     let helper = Database()
     var user: User?
     let realm = try! Realm()
-    
     var onLogin: ((String?, String?) -> Void)?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
-        
     }
     
     @IBAction func registerButton(_ sender: Any) {
         regUser()
-        
     }
 }
 
 // MARK: Functions
 extension RegistrationPageController {
+    
     func regUser() {
         let user = User()
         user.fullName = fullnameTextField.text ?? ""
@@ -47,12 +45,8 @@ extension RegistrationPageController {
         
         onLogin?(emailTextField.text, passwordTextField.text)
         helper.saveToDB(user: user)
-        
         navigationController?.popViewController(animated: true)
-        helper.getFilePath()
     }
-    
-    
     
     func configureShape() {
         fullnameTextField.layer.cornerRadius = 24

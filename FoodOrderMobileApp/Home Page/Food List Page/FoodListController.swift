@@ -25,21 +25,16 @@ class FoodListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        print(foodList)
         searchBackground.layer.cornerRadius = 20
-        backupFoodList = foodList
-        
+        backupFoodList = foodList  //search box ucundu
     }
     
     override func viewWillAppear(_ animated: Bool) {
         user = helper.fetchFromDB()
-        
-        if let index = user.firstIndex(where: {$0.email == emailSaved}) {
-            let userFood = user[index]
-            tempUser = userFood
+        if let index = user.firstIndex(where: {$0.email == emailSaved}) { //her userin individual akkauntu ile girmesi ucundu
+            let userFetch = user[index]
+            tempUser = userFetch
         }
-        
-        print("foodlistdeki \(tempUser.email ?? "bosh")")
     }
     
     @IBAction func searchTextField(_ sender: UITextField) {
@@ -58,7 +53,6 @@ class FoodListController: UIViewController {
         }
         collection.reloadData()
     }
-    
 }
 
 extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -82,7 +76,6 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
                           price: String("$ \(self?.foodList[indexPath.item].mealPrice ?? 0)"),
                           amount: String(self?.foodList[indexPath.item].mealAmount ?? 0))
         }
-        
         // Add to Basket
         cell.addToBasketCallBack = { [weak self] in
             self?.addToBasket(indexPath: indexPath)
@@ -90,23 +83,17 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
         
         return cell
     }
-    
-    func updateAmount(indexPath: IndexPath, newAmount: Int) {
-        // Update the amount in your data source (foodList) accordingly
-        self.foodList[indexPath.item].mealAmount = newAmount
-        
-        if let cell = collection.cellForItem(at: indexPath) as? FoodListCell {
-            cell.foodAmountLabel.text = String(newAmount)
-        }
-    }
+}
+
+// MARK: Functions
+extension FoodListController {
     
     func addToBasket(indexPath: IndexPath) {
         // Get the currently logged-in user
-//        guard let currentUser = helper.fetchFromDB().first else {
-//            print("No user found.")
-//            return
-//        }
-        
+        //        guard let currentUser = helper.fetchFromDB().first else {
+        //            print("No user found.")
+        //            return
+        //                }
         let selectedMeal = self.foodList[indexPath.item]
         
         if let existingMeal = tempUser.purchase?.mealList.first(where: { $0.mealName == selectedMeal.mealName }) {
@@ -115,7 +102,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
                 try self.realm.write {
                     existingMeal.mealAmount = selectedMeal.mealAmount
                 }
-                informAlert(title: "Success", message: "Meal added to basket")
+                informAlert(title: "Success", message: "Meal added to basket") //ekranda bu gorsenir
             } catch {
                 print("Error updating meal count: \(error)")
             }
@@ -139,7 +126,14 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
             }
         }
     }
-    
+    // Update the amount in your data source (foodList) accordingly
+    func updateAmount(indexPath: IndexPath, newAmount: Int) {
+        self.foodList[indexPath.item].mealAmount = newAmount
+        if let cell = collection.cellForItem(at: indexPath) as? FoodListCell {
+            cell.foodAmountLabel.text = String(newAmount)
+        }
+    }
+    // Sebete elave olunanda bildirish verir
     func informAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okayButton = UIAlertAction(title: "Okay", style: .default)
