@@ -32,17 +32,17 @@ class Database {
 
     func fetchFromDB() -> [User] {
         do {
-            let objects = realm.objects(User.self)
-            return Array(objects)
+            let data = realm.objects(User.self)
+            return Array(data)
         } catch {
             print("Error fetching from DB: \(error)")
             return []
         }
     }
 
-    func getUser(email: String) -> User? {
-        return realm.objects(User.self).filter("email == %@", email).first
-    }
+//    func getUser(email: String) -> User? {
+//        return realm.objects(User.self).filter("email == %@", email).first
+//    }
 
     // MARK: - Utility Functions
 

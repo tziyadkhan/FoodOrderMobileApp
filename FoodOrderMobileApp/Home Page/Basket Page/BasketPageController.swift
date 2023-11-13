@@ -35,9 +35,6 @@ class BasketPageController: UIViewController {
         table.reloadData()
         orderConfig()
     }
-    override func viewWillLayoutSubviews() {
-        self.table.reloadData()
-    }
     
     
     @IBAction func orderNowButton(_ sender: Any) {
@@ -64,7 +61,7 @@ extension BasketPageController: UITableViewDelegate, UITableViewDataSource {
         if tempUser.purchase?.purchaseStatus == "incomplete" {
             cell.fillCell(name: tempUser.purchase?.mealList[indexPath.row].mealName,
                           image: tempUser.purchase?.mealList[indexPath.row].mealImage ?? "",
-                          amount: String(tempUser.purchase?.mealList[indexPath.row].mealAmount ?? 3),
+                          amount: String(tempUser.purchase?.mealList[indexPath.row].mealAmount ?? 0),
                           price: "\(String(tempUser.purchase?.mealList[indexPath.row].mealPrice ?? 0)) ₼")
         } else if tempUser.purchase?.purchaseStatus == "complete" {
             try! self.realm.write{
@@ -95,6 +92,8 @@ extension BasketPageController {
             self.tempUser.purchase?.mealList[indexPathRow].mealAmount = 0
             self.tempUser.purchase?.mealList.remove(at: indexPathRow)
         }
+        orderConfig()
+        self.table.reloadData()
     }
     
     func orderConfig() {
@@ -110,8 +109,8 @@ extension BasketPageController {
             foodTotalAmount.text = ("\(String(finalPrice)) ₼")
             foodDeliveryAmountLabel.text = "Free"
         } else {
-            foodTotalAmount.text = "0"
-            foodDeliveryAmountLabel.text = ""
+            foodTotalAmount.text = "0 ₼"
+            foodDeliveryAmountLabel.text = "0 ₼"
         }
         
     }

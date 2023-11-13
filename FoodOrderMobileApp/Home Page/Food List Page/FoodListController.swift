@@ -65,7 +65,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodListCell", for: indexPath) as! FoodListCell
         cell.fillCell(name: foodList[indexPath.item].mealName,
                       image: foodList[indexPath.item].mealImage,
-                      price: String("$ \(foodList[indexPath.item].mealPrice ?? 0)"),
+                      price: String(" \(foodList[indexPath.item].mealPrice  ?? 0) ₼"),
                       amount: String(foodList[indexPath.item].mealAmount ?? 0))
         
         // Update amount when the plus button is tapped
@@ -73,7 +73,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
             self?.updateAmount(indexPath: indexPath, newAmount: amount)
             cell.fillCell(name: self?.foodList[indexPath.item].mealName,
                           image: self?.foodList[indexPath.item].mealImage,
-                          price: String("$ \(self?.foodList[indexPath.item].mealPrice ?? 0)"),
+                          price: String(" \(self?.foodList[indexPath.item].mealPrice ?? 0) ₼"),
                           amount: String(self?.foodList[indexPath.item].mealAmount ?? 0))
         }
         // Add to Basket

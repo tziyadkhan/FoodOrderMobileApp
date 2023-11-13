@@ -37,7 +37,6 @@ class PaymentPageController: UIViewController {
         }
     }
     
-    
     @IBAction func payButton(_ sender: Any) {
         paymentCondition()
     }
@@ -90,6 +89,11 @@ extension PaymentPageController {
         
         let homeButton = UIAlertAction(title: "Okay", style: .default) { (_) in
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "DeliveryPageController") as! DeliveryPageController
+            
+            try! self.realm.write{
+                self.tempUser.purchase?.mealList.removeAll()
+            }
+            
             self.navigationController?.show(controller, sender: nil)
         }
         alertController.addAction(homeButton)
