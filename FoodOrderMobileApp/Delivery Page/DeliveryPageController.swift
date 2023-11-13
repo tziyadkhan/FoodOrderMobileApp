@@ -11,7 +11,7 @@ import Lottie
 class DeliveryPageController: UIViewController {
     @IBOutlet weak var deliveryLottie: LottieAnimationView!
     @IBOutlet weak var progressBarLottie: LottieAnimationView!
-    
+    @IBOutlet weak var confettiLottie: LottieAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
         lottiesConfig()
@@ -23,8 +23,13 @@ class DeliveryPageController: UIViewController {
         deliveryLottie.loopMode = .loop
         deliveryLottie.layer.cornerRadius = 20
         
-        progressBarLottie.play()
+        
         progressBarLottie.loopMode = .playOnce
+        progressBarLottie.play { [weak self] _ in
+            self?.confettiLottie.play()
+            self?.confettiLottie.loopMode = .loop
+        }
     }
+    
 
 }
