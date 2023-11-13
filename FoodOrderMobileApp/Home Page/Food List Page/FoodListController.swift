@@ -81,8 +81,6 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
             self?.addToBasket(indexPath: indexPath)
         }
         
-
-        
         return cell
     }
 }
@@ -91,13 +89,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
 extension FoodListController {
     
     func addToBasket(indexPath: IndexPath) {
-        // Get the currently logged-in user
-        //        guard let currentUser = helper.fetchFromDB().first else {
-        //            print("No user found.")
-        //            return
-        //                }
         let selectedMeal = self.foodList[indexPath.item]
-        
         if let existingMeal = tempUser.purchase?.mealList.first(where: { $0.mealName == selectedMeal.mealName }) {
             // If the meal is already in the basket, update the count
             do {

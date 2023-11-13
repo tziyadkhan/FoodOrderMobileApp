@@ -465,6 +465,16 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="LottieAnimationView" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-3u-jy3" customClass="LottieAnimationView" customModule="Lottie">
                                 <rect key="frame" x="16" y="68" width="361" height="716"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMM-hg-7fE" customClass="LottieAnimationView" customModule="Lottie">
+                                        <rect key="frame" x="0.0" y="208" width="360" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="delivered"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="confetti"/>
@@ -476,6 +486,7 @@
                     </view>
                     <connections>
                         <outlet property="confettiLottie" destination="jJe-3u-jy3" id="iaX-Xb-Ozk"/>
+                        <outlet property="deliveredLottie" destination="SMM-hg-7fE" id="vHy-P4-Y1n"/>
                         <outlet property="deliveryLottie" destination="fmi-C3-X5Q" id="igt-po-Ww8"/>
                         <outlet property="progressBarLottie" destination="QE4-hO-Cx5" id="Lcs-Hp-lph"/>
                     </connections>

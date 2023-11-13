@@ -36,7 +36,6 @@ class BasketPageController: UIViewController {
         orderConfig()
     }
     
-    
     @IBAction func orderNowButton(_ sender: Any) {
         if tempUser.purchase?.mealList.count ?? 0 > 0 {
             let controller = storyboard?.instantiateViewController(withIdentifier: "PaymentPageController") as! PaymentPageController
@@ -45,7 +44,6 @@ class BasketPageController: UIViewController {
         } else {
             showAlert(title: "Failed", message: "Empty Basket. Please double check your basket before proceeding the order")
         }
-
     }
 }
 
@@ -83,7 +81,7 @@ extension BasketPageController: UITableViewDelegate, UITableViewDataSource {
         return UISwipeActionsConfiguration(actions: [delete])
     }
 }
-
+// MARK: Functions
 extension BasketPageController {
     // Swipe edilan zaman silecek
     func deleteItem(indexPathRow: Int) {

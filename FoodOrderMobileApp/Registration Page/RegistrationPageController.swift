@@ -21,7 +21,6 @@ class RegistrationPageController: UIViewController {
     let realm = try! Realm()
     var onLogin: ((String?, String?) -> Void)?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()

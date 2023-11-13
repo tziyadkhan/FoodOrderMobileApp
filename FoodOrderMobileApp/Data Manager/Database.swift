@@ -18,7 +18,6 @@ class Database {
         }
     }
 
-    // MARK: - CRUD Operations
 
     func saveToDB(user: User) {
         do {
@@ -39,13 +38,7 @@ class Database {
             return []
         }
     }
-
-//    func getUser(email: String) -> User? {
-//        return realm.objects(User.self).filter("email == %@", email).first
-//    }
-
-    // MARK: - Utility Functions
-
+    
     func getFilePath() {
         if let url = realm.configuration.fileURL {
             print("Realm file path: \(url)")

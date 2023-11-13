@@ -19,6 +19,7 @@
 		905334D32AFA9AF8002B0326 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905334D22AFA9AF8002B0326 /* FoodListCell.swift */; };
 		9075DC092AFFEFCB006404DE /* PaymentPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075DC082AFFEFCB006404DE /* PaymentPageController.swift */; };
 		90953B822B01FFCA00073397 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 90953B812B01FFCA00073397 /* confetti.json */; };
+		90953B842B020A1600073397 /* delivered.json in Resources */ = {isa = PBXBuildFile; fileRef = 90953B832B020A1600073397 /* delivered.json */; };
 		909F8C702AF63E4900171515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C6F2AF63E4900171515 /* AppDelegate.swift */; };
 		909F8C722AF63E4900171515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F8C712AF63E4900171515 /* SceneDelegate.swift */; };
 		909F8C772AF63E4900171515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909F8C752AF63E4900171515 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		905334D22AFA9AF8002B0326 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
 		9075DC082AFFEFCB006404DE /* PaymentPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPageController.swift; sourceTree = "<group>"; };
 		90953B812B01FFCA00073397 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
+		90953B832B020A1600073397 /* delivered.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = delivered.json; sourceTree = "<group>"; };
 		909F8C6C2AF63E4900171515 /* FoodOrderMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909F8C6F2AF63E4900171515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909F8C712AF63E4900171515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				90953B812B01FFCA00073397 /* confetti.json */,
 				90C398FA2B00E9BE00A523AF /* progressBar.json */,
+				90953B832B020A1600073397 /* delivered.json */,
 				90C398F82B00E89700A523AF /* outOfDelivery.json */,
 			);
 			path = Animations;
@@ -317,6 +320,7 @@
 			files = (
 				90C398FB2B00E9BE00A523AF /* progressBar.json in Resources */,
 				909F8C7C2AF63E4A00171515 /* LaunchScreen.storyboard in Resources */,
+				90953B842B020A1600073397 /* delivered.json in Resources */,
 				909F8C792AF63E4A00171515 /* Assets.xcassets in Resources */,
 				90953B822B01FFCA00073397 /* confetti.json in Resources */,
 				90C398F92B00E89700A523AF /* outOfDelivery.json in Resources */,

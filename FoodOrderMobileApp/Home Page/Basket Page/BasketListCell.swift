@@ -16,15 +16,13 @@ class BasketListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
         foodAmountLabel.layer.cornerRadius = 12
         foodAmountLabel.layer.masksToBounds = true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func fillCell(name: String?, image: String?, amount: String?, price: String?) {
@@ -33,5 +31,4 @@ class BasketListCell: UITableViewCell {
         foodAmountLabel.text = amount
         foodPriceLabel.text = price
     }
-    
 }

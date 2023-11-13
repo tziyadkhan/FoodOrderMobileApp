@@ -18,7 +18,6 @@ class FoodListCell: UICollectionViewCell {
     var foodAmountCallBack: ((_ amount: Int) -> Void)?
     var addToBasketCallBack: (() -> Void)?
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         background.layer.cornerRadius = 20
@@ -46,7 +45,6 @@ class FoodListCell: UICollectionViewCell {
         }
         foodAmountCallBack?(count)
     }
-    
     
     func fillCell(name: String?, image: String?, price: String?, amount: String?){
         foodNameLabel.text = name

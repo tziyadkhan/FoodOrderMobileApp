@@ -10,7 +10,6 @@ import RealmSwift
 
 class Purchase: Object {
     @Persisted var totalMealPrice: Double?
-    // List of meals
     @Persisted var mealList = List<MealModel>()
     @Persisted var purchaseStatus: String?
 }
