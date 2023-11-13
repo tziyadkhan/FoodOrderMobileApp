@@ -27,34 +27,114 @@
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Meteor Burger",
-        "mealImage": "meteorBurger",
+        "mealName": "Chef Burger",
+        "mealImage": "chefBurger",
         "mealPrice": 13.0,
         "mealContent": "Kotlet, corek, holland pendiri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Beefcake Burger",
-        "mealImage": "beefcakeBurger",
+        "mealName": "Double Big Mac",
+        "mealImage": "doubleBigMac",
         "mealPrice": 14.0,
         "mealContent": "Mal etinden kotlet, corek, holland pendiri",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "BBQ Burger",
-        "mealImage": "bbqBurger",
+        "mealName": "Double Cheese Burger",
+        "mealImage": "doubleCheesseBurger",
         "mealPrice": 14.0,
         "mealContent": "Kotlet, corek, holland pendiri, barbekyu sousu",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Chicken Burger",
-        "mealImage": "chickenBurger",
+        "mealName": "Longer",
+        "mealImage": "longer",
         "mealPrice": 8.0,
         "mealContent": "Toyuq etinden Kotlet, corek, holland pendiri",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Fri",
+        "mealImage": "fri",
+        "mealPrice": 4.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Coca-Cola",
+        "mealImage": "cola",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Fanta",
+        "mealImage": "fanta",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Sprite",
+        "mealImage": "sprite",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Water",
+        "mealImage": "water",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Ketchup",
+        "mealImage": "ketchup",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "BBQ",
+        "mealImage": "bbq",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Mayonese",
+        "mealImage": "mayonese",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Cheese",
+        "mealImage": "cheese",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Mustard",
+        "mealImage": "mustard",
+        "mealPrice": 1.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     }
@@ -72,34 +152,114 @@
     "restaurantDeliveryTime" : "25-30min",
     "mealList": [
     {
-        "mealName": "Tiramisu",
-        "mealImage": "tiramisu",
-        "mealPrice": 20.0,
-        "mealContent": "Egg, sugar, coffee, milk, biscuits",
+        "mealName": "Pakhlava",
+        "mealImage": "paklhava",
+        "mealPrice": 5.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Cinnabon",
-        "mealImage": "cinnabon",
-        "mealPrice": 24.0,
+        "mealName": "Shakarbura",
+        "mealImage": "shekerbura",
+        "mealPrice": 5.0,
         "mealContent": "Cinnamon, egg, flour, milk, curd",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Eclair",
-        "mealImage": "eclair",
-        "mealPrice": 22.0,
+        "mealName": "Truffle Cake",
+        "mealImage": "truffle",
+        "mealPrice": 20.0,
         "mealContent": "Egg, sugar, milk, flour",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Waffle",
-        "mealImage": "waffle",
-        "mealPrice": 10.0,
+        "mealName": "Chocolate Cake",
+        "mealImage": "chocolateCake",
+        "mealPrice": 15.0,
         "mealContent": "Egg, sugar, milk, flour",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Muffin",
+        "mealImage": "muffin",
+        "mealPrice": 3.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Ice Cream Vanilla",
+        "mealImage": "iceVanilla",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Ice Cream Chocolate",
+        "mealImage": "iceChocolate",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Ice Cream Snickers",
+        "mealImage": "iceSnickers",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Ice Cream Bounty",
+        "mealImage": "iceBounty",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Black Tea",
+        "mealImage": "blackTea",
+        "mealPrice": 4.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Green Tea",
+        "mealImage": "greenTea",
+        "mealPrice": 4.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Bubble Tea",
+        "mealImage": "bubbleTea",
+        "mealPrice": 7.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Americano",
+        "mealImage": "americano",
+        "mealPrice": 5.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Latte",
+        "mealImage": "latte",
+        "mealPrice": 5.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     }
@@ -125,29 +285,117 @@
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Ebi Yaki",
-        "mealImage": "ebiyaki",
+        "mealName": "Spring Roll Chicken",
+        "mealImage": "springRollChicken",
         "mealPrice": 24.0,
         "mealContent": "rice, shrimps",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Biryani",
-        "mealImage": "biryani",
+        "mealName": "Udon",
+        "mealImage": "udon",
         "mealPrice": 22.0,
         "mealContent": "par-cooked rice, milk and ghee",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Ramen",
-        "mealImage": "ramen",
+        "mealName": "Shrimps",
+        "mealImage": "shrimps",
         "mealPrice": 10.0,
         "mealContent": "nori, a marinated egg, scallions",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
-    }
+    },
+    {
+        "mealName": "Chops Sticks",
+        "mealImage": "chopStick",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Coca-Cola",
+        "mealImage": "cola",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Fanta",
+        "mealImage": "fanta",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Sprite",
+        "mealImage": "sprite",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Water",
+        "mealImage": "water",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Ketchup",
+        "mealImage": "ketchup",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "BBQ",
+        "mealImage": "bbq",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Mayonese",
+        "mealImage": "mayonese",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Wasabi",
+        "mealImage": "wasabi",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Red Ginger",
+        "mealImage": "ginger",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Unagi",
+        "mealImage": "unagi",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
     ]
 },
  {
@@ -162,37 +410,69 @@
     "restaurantDeliveryTime" : "45-55min",
     "mealList": [
     {
-        "mealName": "Risotto",
-        "mealImage": "risotto",
+        "mealName": "Pizza Formaggi 30cm",
+        "mealImage": "pizzaFormaggi",
         "mealPrice": 20.0,
-        "mealContent": "Pumpkin, red radicchio, mushrooms, sausage or shellfish.",
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Pasta",
-        "mealImage": "pasta",
+        "mealName": "Pizza Vegetariana 30cm",
+        "mealImage": "pizzaVegetariana",
         "mealPrice": 24.0,
-        "mealContent": "Spaghetti, bacon, egg yolk, and cheese",
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Gnocchi",
-        "mealImage": "gnocchi",
+        "mealName": "Spaghetti Carbonara",
+        "mealImage": "spaghettiCarbonara",
         "mealPrice": 22.0,
-        "mealContent": "cheese, spinach, eggs, and a variety of sauces",
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Pesto",
-        "mealImage": "pesto",
-        "mealPrice": 10.0,
-        "mealContent": "Parmesan cheese, Pecorino cheese, pine nuts, garlic, and salt",
+        "mealName": "Calzone Funghi",
+        "mealImage": "calzoneFunghi",
+        "mealPrice": 18.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
-    }
+    },
+    {
+        "mealName": "Château Latour",
+        "mealImage": "chateauLatour",
+        "mealPrice": 45.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Penfolds Grange",
+        "mealImage": "penfoldsGrange",
+        "mealPrice": 25.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Colgin Cariad  Proprietary Red",
+        "mealImage": "colginCariad",
+        "mealPrice": 40.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Water",
+        "mealImage": "water",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
     ]
 },
  {
@@ -215,26 +495,66 @@
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Fajita Steak Salad",
-        "mealImage": "fajita",
+        "mealName": "Caesar Salad With Chicken",
+        "mealImage": "ceaserChicken",
         "mealPrice": 24.0,
         "mealContent": "Jack cheese, some fresh avocado",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Spinach Salad",
-        "mealImage": "spinach",
+        "mealName": "Caesar Salad With Shrimp",
+        "mealImage": "caesarShrimp",
         "mealPrice": 22.0,
         "mealContent": "Peppered bacon bits, hard-boiled eggs and caramelized mushrooms.",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Cobb-Wedge",
-        "mealImage": "cobbWedge",
+        "mealName": "Salad with Fish",
+        "mealImage": "fishSalad",
         "mealPrice": 10.0,
         "mealContent": "Cubed ham, hard-boiled eggs, diced avocados and edamame.",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Apple Juice",
+        "mealImage": "appleJuice",
+        "mealPrice": 4.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Orange Juice",
+        "mealImage": "orangeJuice",
+        "mealPrice": 4.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Water",
+        "mealImage": "water",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Fizzy Water",
+        "mealImage": "fizzyWater",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Ayran",
+        "mealImage": "ayran",
+        "mealPrice": 1.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     }
@@ -252,34 +572,98 @@
     "restaurantDeliveryTime" : "30-35min",
     "mealList": [
     {
-        "mealName": "Bavarian Doner",
-        "mealImage": "bavarian",
-        "mealPrice": 20.0,
-        "mealContent": "Meat,oninion,cheese,fri",
+        "mealName": "Kebab Mixed",
+        "mealImage": "kebabMixed",
+        "mealPrice": 40.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Falafel",
-        "mealImage": "falafel",
-        "mealPrice": 24.0,
-        "mealContent": "Meat,oninion,cheese,fri",
+        "mealName": "Kebab Vegetable",
+        "mealImage": "kebabVegetable",
+        "mealPrice": 30.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Sandwich",
-        "mealImage": "sandwich",
-        "mealPrice": 15.0,
-        "mealContent": "Meat,oninion,cheese,fri in bread",
+        "mealName": "Steak",
+        "mealImage": "steakRibEye",
+        "mealPrice": 70.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     },
     {
         "mealName": "Lavash",
-        "mealImage": "lavash",
+        "mealImage": "kebabLavash",
         "mealPrice": 10.0,
-        "mealContent": "Meat, onion, tomato, lavash",
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Fri",
+        "mealImage": "fri",
+        "mealPrice": 4.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Coca-Cola",
+        "mealImage": "cola",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Fanta",
+        "mealImage": "fanta",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Sprite",
+        "mealImage": "sprite",
+        "mealPrice": 2.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Water",
+        "mealImage": "water",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Ketchup",
+        "mealImage": "ketchup",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "BBQ",
+        "mealImage": "bbq",
+        "mealPrice": 1.0,
+        "mealContent": "",
+        "mealAmount": 0,
+        "mealDeliveryFee" : "Free"
+    },
+    {
+        "mealName": "Mayonese",
+        "mealImage": "mayonese",
+        "mealPrice": 1.0,
+        "mealContent": "",
         "mealAmount": 0,
         "mealDeliveryFee" : "Free"
     }

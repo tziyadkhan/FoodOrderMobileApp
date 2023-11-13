@@ -24,12 +24,12 @@ class FoodListCell: UICollectionViewCell {
     }
     
     @IBAction func addBasketButton(_ sender: Any) {
-        print("addbasket")
+//        print("addbasket")
         addToBasketCallBack?()        
     }
     
     @IBAction func addAmount(_ sender: Any) {
-        print("plus")
+//        print("plus")
         let amount = self.foodAmountLabel.text ?? "0"
         var count: Int = Int(amount) ?? 0
         count += 1
@@ -37,7 +37,7 @@ class FoodListCell: UICollectionViewCell {
     }
     
     @IBAction func subtractAmount(_ sender: Any) {
-        print("minus")
+//        print("minus")
         let amount = self.foodAmountLabel.text ?? "0"
         var count: Int = Int(amount) ?? 0
         if count > 0 {
