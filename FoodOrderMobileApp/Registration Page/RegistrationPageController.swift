@@ -29,22 +29,37 @@ class RegistrationPageController: UIViewController {
     @IBAction func registerButton(_ sender: Any) {
         regUser()
     }
+    
 }
+
 
 // MARK: Functions
 extension RegistrationPageController {
     
     func regUser() {
-        let user = User()
-        user.fullName = fullnameTextField.text ?? ""
-        user.email = emailTextField.text ?? ""
-        user.password = passwordTextField.text ?? ""
-        user.phoneNumber = phonenumberTextField.text ?? ""
-        user.purchase = Purchase()
         
-        onLogin?(emailTextField.text, passwordTextField.text)
-        helper.saveToDB(user: user)
-        navigationController?.popViewController(animated: true)
+        if let regEmail = emailTextField.text,
+           let regFullname = fullnameTextField.text,
+           let regPhoneNumber = phonenumberTextField.text,
+           let regPassword = passwordTextField.text,
+           !regEmail.isEmpty,
+           !regFullname.isEmpty,
+           !regPhoneNumber.isEmpty,
+           !regPassword.isEmpty {
+            
+            let user = User()
+            user.fullName = regFullname
+            user.email = regEmail
+            user.password = regPassword
+            user.phoneNumber = regPhoneNumber
+            user.purchase = Purchase()
+            
+            onLogin?(emailTextField.text, passwordTextField.text)
+            helper.saveToDB(user: user)
+            navigationController?.popViewController(animated: true)
+        } else {
+            showAlert(title: "Failed", message: "Please enter the correct details for registration")
+        }
     }
     
     func configureShape() {

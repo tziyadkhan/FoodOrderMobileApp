@@ -543,7 +543,7 @@
         "mealDeliveryFee" : "Free"
     },
     {
-        "mealName": "Fizzy Water",
+        "mealName": "Sparkling Water",
         "mealImage": "fizzyWater",
         "mealPrice": 2.0,
         "mealContent": "",
