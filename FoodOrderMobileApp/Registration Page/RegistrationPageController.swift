@@ -17,14 +17,23 @@ class RegistrationPageController: UIViewController {
     @IBOutlet weak var signupBackground: UIButton!
     
     let helper = Database()
-//    var user: User?
-//    let realm = try! Realm()
+    let emailSaved = UserDefaults.standard.string(forKey: "enteredEmail")
+    var user = [User]()
+    var tempUser = User()
     var onLogin: ((String?, String?) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
         touchGesture()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        user = helper.fetchFromDB()
+        if let index = user.firstIndex(where: {$0.email == emailSaved}) { //her userin individual akkauntu ile girmesi ucundu
+            let userFetch = user[index]
+            tempUser = userFetch
+        }
     }
     
     @IBAction func registerButton(_ sender: Any) {
@@ -42,7 +51,6 @@ class RegistrationPageController: UIViewController {
 extension RegistrationPageController {
     
     func regUser() {
-        
         if let regEmail = emailTextField.text,
            let regFullname = fullnameTextField.text,
            let regPhoneNumber = phonenumberTextField.text,
@@ -52,16 +60,21 @@ extension RegistrationPageController {
            !regPhoneNumber.isEmpty,
            !regPassword.isEmpty {
             
-            let user = User()
-            user.fullName = regFullname
-            user.email = regEmail
-            user.password = regPassword
-            user.phoneNumber = regPhoneNumber
-            user.purchase = Purchase()
+            if regEmail != tempUser.email {
+                let user = User()
+                user.fullName = regFullname
+                user.email = regEmail
+                user.password = regPassword
+                user.phoneNumber = regPhoneNumber
+                user.purchase = Purchase()
+                
+                onLogin?(emailTextField.text, passwordTextField.text)
+                helper.saveToDB(user: user)
+                navigationController?.popViewController(animated: true)
+            } else {
+                showAlert(title: "Failed", message: "The user already exist!")
+            }
             
-            onLogin?(emailTextField.text, passwordTextField.text)
-            helper.saveToDB(user: user)
-            navigationController?.popViewController(animated: true)
         } else {
             showAlert(title: "Failed", message: "Please enter the correct details for registration")
         }

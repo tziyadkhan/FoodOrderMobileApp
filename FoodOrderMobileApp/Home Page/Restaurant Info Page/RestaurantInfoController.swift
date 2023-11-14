@@ -26,22 +26,21 @@ class RestaurantInfoController: UIViewController {
         super.viewDidLoad()
         fillData()
     }
-    
+
     func fillData() {
         restaurantName.text = restaurant?.restaurantName
         restaurantImage.image = UIImage(named: restaurant?.restaurantImage ?? "empty")
         self.restaurantImage.layer.cornerRadius = 20
         restaurantRate.text = restaurant?.restaurantRate
         restaurantDistance.text = restaurant?.restaurantDistance
-        restaurantSlogan.text = restaurant?.restaurantSlogan
-        restaurantAddress.text = "Address: \(restaurant?.restaurantAdress ?? "")"
-        restaurantDeliveryTime.text = "Delivery Time: \(restaurant?.restaurantDeliveryTime ?? "")"
-        restaurantWorkingHours.text = "Working hours: \(restaurant?.restaurantWorkingHours ?? "")"
+        restaurantSlogan.text = "📣 \(restaurant?.restaurantSlogan ?? "")"
+        restaurantAddress.text = "📍Address: \(restaurant?.restaurantAdress ?? "")"
+        restaurantDeliveryTime.text = "🛵 Delivery Time: \(restaurant?.restaurantDeliveryTime ?? "")"
+        restaurantWorkingHours.text = "🕰️ Working hours: \(restaurant?.restaurantWorkingHours ?? "")"
         restaurantInfo.text = restaurant?.restaurantInfo
         restaurantInfo.layer.cornerRadius = 20
-        aboutLabel.text = "About \(restaurant?.restaurantName ?? "")"        
+        aboutLabel.text = "About the restaurant"
     }
-    
 }
 
 
