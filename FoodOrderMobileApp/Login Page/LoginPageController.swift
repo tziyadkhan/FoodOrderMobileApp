@@ -21,6 +21,7 @@ class LoginPageController: UIViewController {
         super.viewDidLoad()
         configureShape()
         helper.getFilePath()
+        touchGesture()
     }
     
     @IBAction func loginButton(_ sender: Any) {
@@ -30,6 +31,10 @@ class LoginPageController: UIViewController {
     @IBAction func registerButton(_ sender: Any) {
         registrationPage()
     }
+    
+    @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
 }
 
 // MARK: Functions
@@ -85,5 +90,12 @@ extension LoginPageController {
         } else {
             showAlert(title: "Failure", message: "Empty input")
         }
+    }
+    
+    // Telefonumu simulyator kimi istifade eden zaman, ekran qiragina vurulanda klaviatura itir
+    func touchGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                tapGesture.cancelsTouchesInView = false // Allows touch event to pass through to the view hierarchy
+                view.addGestureRecognizer(tapGesture)
     }
 }

@@ -27,6 +27,7 @@ class FoodListController: UIViewController {
         super.viewDidLoad()
         searchBackground.layer.cornerRadius = 20
         backupFoodList = foodList  //search box ucundu
+        touchGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +37,10 @@ class FoodListController: UIViewController {
             tempUser = userFetch
         }
     }
+    
+    @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
     
     @IBAction func searchTextField(_ sender: UITextField) {
         if let searchText = sender.text, !searchText.isEmpty {
@@ -135,5 +140,11 @@ extension FoodListController {
         let okayButton = UIAlertAction(title: "Okay", style: .default)
         alertController.addAction(okayButton)
         self.present(alertController, animated: true)
+    }
+    
+    func touchGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                tapGesture.cancelsTouchesInView = false // Allows touch event to pass through to the view hierarchy
+                view.addGestureRecognizer(tapGesture)
     }
 }

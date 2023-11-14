@@ -28,6 +28,8 @@ class PaymentPageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         shapeConfig()
+        touchGesture()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +39,10 @@ class PaymentPageController: UIViewController {
             tempUser = userCalled
         }
     }
+    
+    @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
     
     @IBAction func payButton(_ sender: Any) {
         paymentCondition()
@@ -104,6 +110,12 @@ extension PaymentPageController {
         let okayButton = UIAlertAction(title: "Got it", style: .cancel)
         alertController.addAction(okayButton)
         self.present(alertController, animated: true)
+    }
+    
+    func touchGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                tapGesture.cancelsTouchesInView = false // Allows touch event to pass through to the view hierarchy
+                view.addGestureRecognizer(tapGesture)
     }
 }
 

@@ -356,7 +356,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vFT-ye-WfM">
                                 <rect key="frame" x="156" y="329" width="25" height="19.333333333333314"/>
@@ -392,7 +392,7 @@
                                 <color key="backgroundColor" name="CardBG"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWo-uz-MmA">
                                 <rect key="frame" x="71" y="711" width="251" height="80"/>
@@ -415,7 +415,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lhf-nr-hhP"/>
@@ -433,7 +433,6 @@
                             <constraint firstItem="I0r-CT-nLo" firstAttribute="trailing" secondItem="tj4-uZ-BUO" secondAttribute="trailing" id="9ds-ac-U9x"/>
                             <constraint firstItem="Iue-3t-els" firstAttribute="centerX" secondItem="Lhf-nr-hhP" secondAttribute="centerX" id="B6S-Wm-VoJ"/>
                             <constraint firstItem="QvO-DO-1yS" firstAttribute="top" secondItem="OBh-A7-BcK" secondAttribute="bottom" constant="-91.666666666666742" id="GMq-Ir-v10"/>
-                            <constraint firstItem="QvO-DO-1yS" firstAttribute="leading" secondItem="zCX-7b-R1U" secondAttribute="trailing" constant="13.333333333333343" id="GqO-Vw-yw9"/>
                             <constraint firstItem="MRV-4a-pV2" firstAttribute="bottom" secondItem="ust-9h-uod" secondAttribute="bottom" id="Ipa-Wp-Apm"/>
                             <constraint firstItem="Lhf-nr-hhP" firstAttribute="trailing" secondItem="6QR-kK-phd" secondAttribute="trailing" constant="30" id="JIH-w2-oOs"/>
                             <constraint firstItem="MRV-4a-pV2" firstAttribute="centerX" secondItem="QvO-DO-1yS" secondAttribute="centerX" id="Jzv-B4-w24"/>
@@ -1052,7 +1051,7 @@
         <scene sceneID="ivV-a0-mm2">
             <objects>
                 <viewController storyboardIdentifier="RegistrationPageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QyT-Bj-vSl" customClass="RegistrationPageController" customModule="FoodOrderMobileApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mEF-jI-Rhp">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="mEF-jI-Rhp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1081,22 +1080,22 @@
                                             <constraint firstAttribute="height" constant="48" id="y7h-3V-EZc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hg0-ys-7dE">
                                         <rect key="frame" x="0.0" y="64" width="330" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eX-Lb-kRj">
                                         <rect key="frame" x="0.0" y="128" width="330" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-aa-d2L">
                                         <rect key="frame" x="0.0" y="192" width="330" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bv-hG-oux">
                                         <rect key="frame" x="0.0" y="256" width="330" height="48"/>
@@ -1224,16 +1223,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -24,6 +24,7 @@ class BasketPageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         table.reloadData()
+        touchGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +36,10 @@ class BasketPageController: UIViewController {
         table.reloadData()
         orderConfig()
     }
+    
+    @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
     
     @IBAction func orderNowButton(_ sender: Any) {
         if tempUser.purchase?.mealList.count ?? 0 > 0 {
@@ -118,6 +123,12 @@ extension BasketPageController {
         
         alertController.addAction(okayButton)
         present(alertController, animated: true)
+    }
+    
+    func touchGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                tapGesture.cancelsTouchesInView = false // Allows touch event to pass through to the view hierarchy
+                view.addGestureRecognizer(tapGesture)
     }
 }
 // Realm Path /Users/ziyadkhan/Library/Developer/CoreSimulator/Devices/088998E2-83B3-4D2B-B1D6-8CD936A0125A/data/Containers/Data/Application/9D162F11-BCA2-4E64-8ED9-8D80B91C83E8/Documents/

@@ -24,11 +24,16 @@ class RegistrationPageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureShape()
+        touchGesture()
     }
     
     @IBAction func registerButton(_ sender: Any) {
         regUser()
     }
+    
+    @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
     
 }
 
@@ -80,5 +85,11 @@ extension RegistrationPageController {
         let okayButton = UIAlertAction(title: "Okay", style: .default)
         alertController.addAction(okayButton)
         self.present(alertController, animated: true)
+    }
+    // Telefonumu simulyator kimi istifade eden zaman, ekran qiragina vurulanda klaviatura itir
+    func touchGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                tapGesture.cancelsTouchesInView = false // Allows touch event to pass through to the view hierarchy
+                view.addGestureRecognizer(tapGesture)
     }
 }

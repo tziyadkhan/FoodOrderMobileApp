@@ -20,11 +20,19 @@ class HomePageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBackground.layer.cornerRadius = 20
+        
         parser.parseJsonFile { parsedItems in
             self.items = parsedItems
         }
+        
         backupItems = items //search box ucun
+        
+        touchGesture()
     }
+    
+    @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
     
     @IBAction func searchTextField(_ sender: UITextField) {
         if let searchText = sender.text, !searchText.isEmpty {
@@ -83,5 +91,11 @@ extension HomePageController {
             UserDefaults.standard.setValue(false, forKey: "loggedIN") // Setting the flag
             sceneDelegate.loginPage(windowScene: scene)
         }
+    }
+    
+    func touchGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                tapGesture.cancelsTouchesInView = false // Allows touch event to pass through to the view hierarchy
+                view.addGestureRecognizer(tapGesture)
     }
 }
