@@ -25,7 +25,12 @@ class FoodListCell: UICollectionViewCell {
     
     @IBAction func addBasketButton(_ sender: Any) {
 //        print("addbasket")
-        addToBasketCallBack?()        
+        if self.foodAmountLabel.text != "0" {
+            addToBasketCallBack?()
+        } else {
+            print("item 0-di")
+        }
+        
     }
     
     @IBAction func addAmount(_ sender: Any) {

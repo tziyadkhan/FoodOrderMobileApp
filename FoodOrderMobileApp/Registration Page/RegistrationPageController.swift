@@ -17,8 +17,8 @@ class RegistrationPageController: UIViewController {
     @IBOutlet weak var signupBackground: UIButton!
     
     let helper = Database()
-    var user: User?
-    let realm = try! Realm()
+//    var user: User?
+//    let realm = try! Realm()
     var onLogin: ((String?, String?) -> Void)?
     
     override func viewDidLoad() {

@@ -7,9 +7,9 @@
 
 import Foundation
 import RealmSwift
-//
 
 class Database {
+    
     var realm: Realm {
         do {
             return try Realm()
@@ -17,7 +17,6 @@ class Database {
             fatalError("Error initializing Realm: \(error)")
         }
     }
-
 
     func saveToDB(user: User) {
         do {

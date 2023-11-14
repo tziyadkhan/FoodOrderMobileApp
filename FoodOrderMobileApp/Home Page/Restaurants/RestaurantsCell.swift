@@ -12,7 +12,7 @@ class RestaurantsCell: UICollectionViewCell {
     @IBOutlet weak var restaurantImage: UIImageView!
     @IBOutlet weak var restaurantName: UILabel!
     
-    var restaurantInfoCallBack: (() -> Void)?
+    var restaurantInfoCallBack: (() -> Void)? //Info button'nu istifade etmek ucun 
     
     override func awakeFromNib() {
         super.awakeFromNib()

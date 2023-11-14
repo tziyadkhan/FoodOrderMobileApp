@@ -61,8 +61,8 @@ extension BasketPageController: UITableViewDelegate, UITableViewDataSource {
                           image: tempUser.purchase?.mealList[indexPath.row].mealImage ?? "",
                           amount: String(tempUser.purchase?.mealList[indexPath.row].mealAmount ?? 0),
                           price: "\(String(tempUser.purchase?.mealList[indexPath.row].mealPrice ?? 0)) ₼")
-        } else if tempUser.purchase?.purchaseStatus == "complete" {
-            try! self.realm.write{
+        } else if tempUser.purchase?.purchaseStatus == "complete" { //order ugurla bitenden sonra basketi temizleyir
+            try! self.realm.write {
                 tempUser.purchase?.mealList.removeAll()
             }
         }
@@ -76,7 +76,6 @@ extension BasketPageController: UITableViewDelegate, UITableViewDataSource {
             self.deleteItem(indexPathRow: indexPath.row)
             self.table.reloadData()
         }
-        
         delete.backgroundColor = .red
         return UISwipeActionsConfiguration(actions: [delete])
     }
@@ -85,7 +84,7 @@ extension BasketPageController: UITableViewDelegate, UITableViewDataSource {
 extension BasketPageController {
     // Swipe edilan zaman silecek
     func deleteItem(indexPathRow: Int) {
-        // Updates the User Purchase info
+        // Userin databazadaki Purchasini yenileyir
         try! self.realm.write {
             self.tempUser.purchase?.mealList[indexPathRow].mealAmount = 0
             self.tempUser.purchase?.mealList.remove(at: indexPathRow)

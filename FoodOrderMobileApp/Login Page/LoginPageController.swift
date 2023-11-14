@@ -12,8 +12,9 @@ class LoginPageController: UIViewController {
     @IBOutlet weak var loginButtonView: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    
     let helper = Database()
-    var realm = try! Realm()
+//    var realm = try! Realm()
     var userLoginList = [User]()
     
     override func viewDidLoad() {
@@ -79,10 +80,10 @@ extension LoginPageController {
                 let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
                 navigationController?.show(controller, sender: nil)
             } else {
-                showAlert(title: "Xəta", message: "Email və ya şifrə düzgün qeyd edilməyib")
+                showAlert(title: "Failure", message: "Email or password is wrong")
             }
         } else {
-            showAlert(title: "Xəta", message: "Bosh melumat daxil olunub")
+            showAlert(title: "Failure", message: "Empty input")
         }
     }
 }

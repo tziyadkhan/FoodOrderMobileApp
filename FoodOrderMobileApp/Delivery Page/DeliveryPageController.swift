@@ -13,8 +13,8 @@ class DeliveryPageController: UIViewController {
     @IBOutlet weak var deliveryLottie: LottieAnimationView!
     @IBOutlet weak var progressBarLottie: LottieAnimationView!
     @IBOutlet weak var confettiLottie: LottieAnimationView!
-    
     @IBOutlet weak var deliveredLottie: LottieAnimationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         lottiesConfig()

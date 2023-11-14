@@ -68,7 +68,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
                       price: String(" \(foodList[indexPath.item].mealPrice  ?? 0) ₼"),
                       amount: String(foodList[indexPath.item].mealAmount ?? 0))
         
-        // Update amount when the plus button is tapped
+        // Yemek sayinda artib/azalma olsa, yenilesin
         cell.foodAmountCallBack = { [weak self] amount in
             self?.updateAmount(indexPath: indexPath, newAmount: amount)
             cell.fillCell(name: self?.foodList[indexPath.item].mealName,
@@ -76,7 +76,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
                           price: String(" \(self?.foodList[indexPath.item].mealPrice ?? 0) ₼"),
                           amount: String(self?.foodList[indexPath.item].mealAmount ?? 0))
         }
-        // Add to Basket
+        // Baskete elave etsin
         cell.addToBasketCallBack = { [weak self] in
             self?.addToBasket(indexPath: indexPath)
         }
@@ -91,7 +91,7 @@ extension FoodListController {
     func addToBasket(indexPath: IndexPath) {
         let selectedMeal = self.foodList[indexPath.item]
         if let existingMeal = tempUser.purchase?.mealList.first(where: { $0.mealName == selectedMeal.mealName }) {
-            // If the meal is already in the basket, update the count
+            // Yemek basketde var idise, sadece sayini yenile
             do {
                 try self.realm.write {
                     existingMeal.mealAmount = selectedMeal.mealAmount
@@ -102,7 +102,7 @@ extension FoodListController {
                 print("Error updating meal count: \(error)")
             }
         } else {
-            // If the meal is not in the basket, add it with the current amount
+            // Eger yemek basketde yoxdusa, sayi nedirse ona uygun baskete elave et
             let newMeal = MealModel()
             newMeal.mealName = selectedMeal.mealName
             newMeal.mealImage = selectedMeal.mealImage

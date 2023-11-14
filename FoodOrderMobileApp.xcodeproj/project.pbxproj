@@ -179,13 +179,13 @@
 				90B564662AFCD6CA0082D9E7 /* JSON */,
 				903AA9D92AFA12DE00829DC8 /* Parser */,
 				90C398F72B00E88100A523AF /* Animations */,
+				904942B82AF66D720062D897 /* Tab Bar Controller */,
 				909F8C7D2AF63E4A00171515 /* Info.plist */,
 				909F8C7A2AF63E4A00171515 /* LaunchScreen.storyboard */,
 				909F8C6F2AF63E4900171515 /* AppDelegate.swift */,
 				909F8C712AF63E4900171515 /* SceneDelegate.swift */,
 				909F8C752AF63E4900171515 /* Main.storyboard */,
 				909F8C782AF63E4A00171515 /* Assets.xcassets */,
-				904942B82AF66D720062D897 /* Tab Bar Controller */,
 			);
 			path = FoodOrderMobileApp;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 		90B564682AFCD88B0082D9E7 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
-				904942BC2AF66DF80062D897 /* HomePageController.swift */,
 				903AA9DE2AFA1A1A00829DC8 /* RestaurantsCell.swift */,
+				904942BC2AF66DF80062D897 /* HomePageController.swift */,
 			);
 			path = Restaurants;
 			sourceTree = "<group>";

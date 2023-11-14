@@ -29,6 +29,7 @@ class PaymentPageController: UIViewController {
         super.viewDidLoad()
         shapeConfig()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         user = helper.fetchFromDB()
         if let index = user.firstIndex(where: {$0.email == emailSaved}) {
@@ -70,8 +71,8 @@ extension PaymentPageController {
         } else {
             failure(title: "Failure",
                     message: """
-                                  The money in your account is not enough for this payment.
-                                  Check your account balance or card details and try again.
+                                  The money in your account is not enough for this payment or your card details are wrong.
+                                  Please check and try again.
                                   Balance: \(userBalance) AZN.
                                   """)
         }

@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class RestaurantModel: Codable {
+    
     var restaurantName: String?
     var restaurantSlogan: String?
     var restaurantImage: String?
@@ -19,5 +20,6 @@ class RestaurantModel: Codable {
     var restaurantDistance: String?
     var restaurantDeliveryTime: String?
     var mealList: [MealModel]?
+    
 }
 
