@@ -21,18 +21,18 @@ class DeliveryPageController: UIViewController {
     }
     
     func lottiesConfig() {
-        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "HomePageController")
         deliveryLottie.play()
         deliveryLottie.loopMode = .loop
         deliveryLottie.layer.cornerRadius = 20
         
         progressBarLottie.loopMode = .playOnce
         progressBarLottie.play { [weak self] _ in
+            self?.confettiLottie.loopMode = .playOnce
             self?.confettiLottie.play()
-            self?.confettiLottie.loopMode = .loop
             self?.deliveryLottie.isHidden = true
+            self?.deliveredLottie.loopMode = .playOnce
             self?.deliveredLottie.play()
-            self?.deliveredLottie.loopMode = .loop
         }
     }
 }

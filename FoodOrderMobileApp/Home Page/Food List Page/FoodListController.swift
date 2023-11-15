@@ -84,6 +84,7 @@ extension FoodListController: UICollectionViewDelegate, UICollectionViewDataSour
         // Baskete elave etsin
         cell.addToBasketCallBack = { [weak self] in
             self?.addToBasket(indexPath: indexPath)
+            cell.foodAmountLabel.text = String(0)
         }
         
         return cell
