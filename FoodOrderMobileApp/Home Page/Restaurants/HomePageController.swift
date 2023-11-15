@@ -26,7 +26,6 @@ class HomePageController: UIViewController {
         }
         
         backupItems = items //search box ucun
-        
         touchGesture()
     }
     
@@ -52,7 +51,7 @@ class HomePageController: UIViewController {
     }
     
     @IBAction func logoutButton(_ sender: Any) {
-        setRoot()
+        showAlert(title: "Warning", message: "Are you sure you want to exit?")
     }
 }
 
@@ -91,6 +90,19 @@ extension HomePageController {
             UserDefaults.standard.setValue(false, forKey: "loggedIN") // Setting the flag
             sceneDelegate.loginPage(windowScene: scene)
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okaybutton = UIAlertAction(title: "Log out", style: .default) { (_) in
+            self.setRoot()
+        }
+        let cancelButton = UIAlertAction(title: "Stay", style: .cancel)
+        
+        alertController.addAction(okaybutton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true)
     }
     
     func touchGesture() {

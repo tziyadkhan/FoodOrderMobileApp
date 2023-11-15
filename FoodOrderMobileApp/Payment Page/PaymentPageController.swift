@@ -41,11 +41,15 @@ class PaymentPageController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
-            view.endEditing(true)
-        }
+        view.endEditing(true)
+    }
     
     @IBAction func payButton(_ sender: Any) {
-        paymentCondition()
+        confirmationAlert(title: "Do you confirm?", message: """
+                          From which card : \(cardNumberTextField.text ?? "")
+                          Service name: MusCatFood
+                          Amount: \(userMealPrice) AZN
+                          """)
     }
     
 }
@@ -62,7 +66,7 @@ extension PaymentPageController {
         if (userBalance > userMealPrice) &&
             (cardNumberTextField.text?.count) == 16 &&
             (cvvTextField.text?.count == 3) &&
-            (cardExpireTextField.text ?? "2024" > "2023") {
+            (cardExpireTextField.text ?? "2024" >= "2023") {
             var balance = userBalance - userMealPrice
             successAlert(title: "Successful Payment!", message: """
                         Amount: \(userMealPrice) AZN.
@@ -114,8 +118,21 @@ extension PaymentPageController {
     
     func touchGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-                tapGesture.cancelsTouchesInView = false // Allows touch event to pass through to the view hierarchy
-                view.addGestureRecognizer(tapGesture)
+        tapGesture.cancelsTouchesInView = false // Allows touch event to pass through to the view hierarchy
+        view.addGestureRecognizer(tapGesture)
     }
+    
+    func confirmationAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let confirmButton = UIAlertAction(title: "Confirm", style: .default) { (_) in
+            self.paymentCondition()
+        }
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alertController.addAction(confirmButton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true)
+    }
+    
 }
 

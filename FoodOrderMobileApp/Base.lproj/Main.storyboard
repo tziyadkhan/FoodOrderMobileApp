@@ -346,7 +346,7 @@
                                 <color key="backgroundColor" name="CardBG"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your card number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0r-CT-nLo">
                                 <rect key="frame" x="45" y="292.33333333333331" width="235" height="22"/>
@@ -478,7 +478,7 @@
                                 <rect key="frame" x="16" y="87" width="361" height="136"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99V-BG-pVI">
-                                        <rect key="frame" x="28" y="51" width="305" height="35"/>
+                                        <rect key="frame" x="28" y="38" width="305" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -490,8 +490,8 @@
                                     <constraint firstAttribute="height" constant="136" id="OEo-5c-yo1"/>
                                     <constraint firstAttribute="width" constant="361" id="h3e-qN-g2P"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="99V-BG-pVI" secondAttribute="trailing" constant="20" id="kkF-MG-WXx"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="99V-BG-pVI" secondAttribute="bottom" constant="42" id="thi-R7-zIz"/>
-                                    <constraint firstItem="99V-BG-pVI" firstAttribute="top" secondItem="DXw-Vo-cUA" secondAttribute="topMargin" constant="43" id="tu0-DN-yGy"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="99V-BG-pVI" secondAttribute="bottom" constant="30" id="thi-R7-zIz"/>
+                                    <constraint firstItem="99V-BG-pVI" firstAttribute="top" secondItem="DXw-Vo-cUA" secondAttribute="topMargin" constant="30" id="tu0-DN-yGy"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -601,7 +601,7 @@
             </objects>
             <point key="canvasLocation" x="5664.8854961832058" y="1081.6901408450706"/>
         </scene>
-        <!--Home Page Controller-->
+        <!--Restaurants-->
         <scene sceneID="0Xt-ft-NAg">
             <objects>
                 <viewController storyboardIdentifier="HomePageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x0b-3u-lZ1" customClass="HomePageController" customModule="FoodOrderMobileApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -615,7 +615,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for a restaurant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LHd-5w-fVi">
                                         <rect key="frame" x="8" y="15" width="345" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         <connections>
                                             <action selector="searchTextField:" destination="x0b-3u-lZ1" eventType="editingChanged" id="4LB-YW-gjy"/>
                                         </connections>
@@ -723,13 +723,12 @@
                             <constraint firstItem="FIT-5e-nfQ" firstAttribute="trailing" secondItem="fgz-WB-VUE" secondAttribute="trailing" constant="16" id="bDp-mW-QKj"/>
                             <constraint firstItem="gaU-8j-ERC" firstAttribute="width" secondItem="FIT-5e-nfQ" secondAttribute="width" multiplier="0.918575" id="dfU-lY-BCv"/>
                             <constraint firstItem="gaU-8j-ERC" firstAttribute="trailing" secondItem="fgz-WB-VUE" secondAttribute="trailing" id="ghl-0C-TRf"/>
-                            <constraint firstItem="gaU-8j-ERC" firstAttribute="leading" secondItem="fgz-WB-VUE" secondAttribute="leading" id="m68-mr-vRA"/>
                             <constraint firstItem="gaU-8j-ERC" firstAttribute="centerX" secondItem="FIT-5e-nfQ" secondAttribute="centerX" id="nWv-Ra-uia"/>
                             <constraint firstItem="gaU-8j-ERC" firstAttribute="height" secondItem="FIT-5e-nfQ" secondAttribute="height" multiplier="0.0960961" id="tGK-0j-zdA"/>
                             <constraint firstItem="fgz-WB-VUE" firstAttribute="width" secondItem="FIT-5e-nfQ" secondAttribute="width" multiplier="0.918575" id="vPs-cH-hDt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wbw-TO-rOp">
+                    <navigationItem key="navigationItem" title="Restaurants" id="wbw-TO-rOp">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="xSC-3k-v8c">
                             <connections>
                                 <action selector="logoutButton:" destination="x0b-3u-lZ1" id="kLm-4t-4k9"/>
@@ -887,7 +886,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for a food" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIV-Z6-6ic">
                                         <rect key="frame" x="16" y="23" width="345" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         <connections>
                                             <action selector="searchTextField:" destination="ZZf-C2-3Qb" eventType="editingChanged" id="SK0-Fs-SwO"/>
                                         </connections>
@@ -1080,7 +1079,7 @@
                                             <constraint firstAttribute="height" constant="48" id="y7h-3V-EZc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hg0-ys-7dE">
                                         <rect key="frame" x="0.0" y="64" width="330" height="48"/>
