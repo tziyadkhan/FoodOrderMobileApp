@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class PaymentPageController: UIViewController {
+class PaymentPageController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var payInvoiceBG: UIView!
@@ -29,6 +29,9 @@ class PaymentPageController: UIViewController {
         super.viewDidLoad()
         shapeConfig()
         touchGesture()
+        cardNumberTextField.delegate = self
+        cardExpireTextField.delegate = self
+        cvvTextField.delegate = self
         
     }
     
@@ -66,7 +69,7 @@ extension PaymentPageController {
         if (userBalance > userMealPrice) &&
             (cardNumberTextField.text?.count) == 16 &&
             (cvvTextField.text?.count == 3) &&
-            (cardExpireTextField.text ?? "2024" >= "2023") {
+            (cardExpireTextField.text ?? "2024" >= "2023" && cardExpireTextField.text ?? "2024" <= "2035") {
             var balance = userBalance - userMealPrice
             successAlert(title: "Successful Payment!", message: """
                         Amount: \(userMealPrice) AZN.
@@ -132,6 +135,28 @@ extension PaymentPageController {
         alertController.addAction(confirmButton)
         alertController.addAction(cancelButton)
         present(alertController, animated: true)
+    }
+    
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength: Int
+        
+        if textField.text?.count == cardNumberTextField.text?.count {
+            maxLength = 16
+        } else if textField.text?.count == cardExpireTextField.text?.count {
+            maxLength = 4
+        } else if textField.text?.count == cvvTextField.text?.count {
+            maxLength = 3
+        } else {
+            return true // Handle other text fields, if any
+        }
+        
+        if let currentString = textField.text as NSString? {
+            let newString = currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength
+        }
+        
+        return true
     }
     
 }
