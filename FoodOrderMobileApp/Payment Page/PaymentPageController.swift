@@ -68,7 +68,8 @@ extension PaymentPageController {
         
         if (userBalance > userMealPrice) &&
             (cardNumberTextField.text?.count) == 16 &&
-            (cvvTextField.text?.count == 3) &&
+            (usernameTextField.text?.count) != nil &&
+            (cvvTextField.text?.count) == 3 &&
             (cardExpireTextField.text ?? "2024" >= "2023" && cardExpireTextField.text ?? "2024" <= "2035") {
             var balance = userBalance - userMealPrice
             successAlert(title: "Successful Payment!", message: """
@@ -148,7 +149,7 @@ extension PaymentPageController {
         } else if textField.text?.count == cvvTextField.text?.count {
             maxLength = 3
         } else {
-            return true // Handle other text fields, if any
+            return true
         }
         
         if let currentString = textField.text as NSString? {
